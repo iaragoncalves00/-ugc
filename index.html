@@ -4,70 +4,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Iara Gonçalves · portfólio UGC</title>
-<meta name="description" content="Iara Gonçalves, UGC creator em Brasília: vídeos com vida real e storytelling para marcas de saúde, beleza, moda e lifestyle.">
+<meta name="description" content="Iara Gonçalves, UGC creator e influencer em Brasília: vídeos com vida real e storytelling para marcas de saúde, beleza, moda e lifestyle.">
+<meta name="theme-color" content="#1b2b22">
 
-<!-- Prévia do link no WhatsApp. TROQUE "MEU-LINK" pelo endereço do site depois de publicar -->
+<!-- Prévia do link no WhatsApp (endereço do site publicado no GitHub Pages) -->
 <meta property="og:title" content="Iara Gonçalves · portfólio UGC">
-<meta property="og:description" content="Sou fisioterapeuta e criadora de conteúdo, especializada em storytelling para marcas de saúde, beleza, fashion e lifestyle. Meu conteúdo combina vida real, comunicação natural e uma estética cuidadosa para apresentar produtos de um jeito que não parece publicidade, mas desperta identificação, desejo e ação.">
+<meta property="og:description" content="Fisioterapeuta e criadora de conteúdo. Storytelling com vida real para marcas de saúde, beleza, moda e lifestyle.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://MEU-LINK/">
-<meta property="og:image" content="https://MEU-LINK/midia/capa.jpg">
+<meta property="og:url" content="https://iara55544-lab.github.io/-ugc/">
+<meta property="og:image" content="https://iara55544-lab.github.io/-ugc/midia/capa.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet">
 
 <style>
+/* Paleta: verde #1b2b22 · oliva #8f7a2a · creme #e9e5da · amarelo #e8c94a (e tons claros delas) */
 :root{
-  --creme:#FDF6EE; --papel:#FFFBF6; --vinho:#7A1430; --verm:#D2283A;
-  --rosa:#F9C9D6; --rosa2:#F48FB1; --lilas:#C9C6FF; --pessego:#F9A27C; --linha:#F2D3D9;
+  --verde:#1b2b22; --oliva:#8f7a2a; --creme:#e9e5da; --amarelo:#e8c94a;
+  --papel:#f5f2ea; --amarelo-claro:#f3e3a0; --salvia:#cfd6c8; --linha:#d6d0bd;
   --serifa:"Fraunces", Georgia, serif; --texto:"DM Sans", system-ui, sans-serif; --mao:"Caveat", cursive;
+  --sombra:rgba(27,43,34,.18);
 }
 *{box-sizing:border-box}
 html{overflow-x:clip}
 @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
-body{margin:0;background:var(--creme);color:var(--vinho);font-family:var(--texto);font-size:16px;line-height:1.55;overflow-x:clip}
+body{margin:0;background:var(--creme);color:var(--verde);font-family:var(--texto);font-size:16px;line-height:1.55;overflow-x:clip}
 img,video{display:block;max-width:100%}
 a{color:inherit}
 h1,h2,h3{font-family:var(--serifa);font-weight:500;margin:0;line-height:1.1}
 h2{font-size:clamp(28px,4vw,44px)}
 h3{font-size:clamp(22px,2.6vw,30px)}
 p{margin:0}
-:focus-visible{outline:3px solid var(--verm);outline-offset:3px}
+:focus-visible{outline:3px solid var(--oliva);outline-offset:3px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
 section{scroll-margin-top:84px}
 .mao{font-family:var(--mao);font-weight:700}
-.etiqueta-rosa{display:inline-block;background:var(--rosa);color:var(--vinho);border:1.5px solid var(--vinho);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.etiqueta{display:inline-block;background:var(--amarelo-claro);color:var(--verde);border:1.5px solid var(--verde);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.centro{text-align:center}
+.sub{margin-top:12px;max-width:56ch;font-size:16px}
+.centro .sub{margin-left:auto;margin-right:auto}
 .quadriculado{background-color:var(--papel);background-image:linear-gradient(var(--linha) 1px,transparent 1px),linear-gradient(90deg,var(--linha) 1px,transparent 1px);background-size:26px 26px}
 
 /* ---------- botões ---------- */
 .botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;border:2px solid var(--vinho);font-family:var(--texto);font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:3px 3px 0 var(--vinho);transition:transform .15s, box-shadow .15s}
-.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--vinho)}
-.btn-lilas{background:var(--lilas);color:var(--vinho)}
-.btn-branco{background:#fff;color:var(--vinho)}
-.btn-verm{background:var(--verm);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;border:2px solid var(--verde);font-family:var(--texto);font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:3px 3px 0 var(--verde);transition:transform .15s, box-shadow .15s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--verde)}
+.btn-amarelo{background:var(--amarelo);color:var(--verde)}
+.btn-branco{background:#fff;color:var(--verde)}
+.btn-verde{background:var(--verde);color:var(--creme);box-shadow:3px 3px 0 var(--oliva)}
+.btn-verde:hover{box-shadow:4px 4px 0 var(--oliva)}
 
 /* ---------- lacunas listradas ---------- */
-.lacuna{width:100%;height:100%;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;text-align:center;background:repeating-linear-gradient(135deg,var(--papel) 0 10px,var(--linha) 10px 20px);border:2px dashed var(--rosa2);border-radius:6px}
+.lacuna{width:100%;height:100%;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;text-align:center;background:repeating-linear-gradient(135deg,var(--papel) 0 10px,var(--linha) 10px 20px);border:2px dashed var(--oliva);border-radius:6px}
 .lac-ico{font-size:26px;line-height:1}
-.lac-dica{background:var(--papel);color:var(--vinho);font-size:13px;line-height:1.35;padding:6px 10px;border-radius:10px;max-width:28ch}
-.lacuna.linha{min-height:0;flex-direction:row;padding:10px;justify-content:flex-start;text-align:left}
+.lac-dica{background:var(--papel);color:var(--verde);font-size:13px;line-height:1.35;padding:6px 10px;border-radius:10px;max-width:28ch}
 
 /* ---------- menu ---------- */
-.topo{position:sticky;top:0;z-index:50;background:var(--rosa)}
-.topo::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;background:radial-gradient(circle at 12px 0,var(--rosa) 11.5px,transparent 12px) 0 0/24px 12px repeat-x;pointer-events:none}
-.nav{max-width:1160px;margin:0 auto;padding:0 28px;height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-.nav-lado{display:flex;gap:22px}
+.topo{position:sticky;top:0;z-index:50;background:var(--amarelo-claro)}
+.topo::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;background:radial-gradient(circle at 12px 0,var(--amarelo-claro) 11.5px,transparent 12px) 0 0/24px 12px repeat-x;pointer-events:none}
+.nav{max-width:1240px;margin:0 auto;padding:0 28px;height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.nav-lado{display:flex;gap:20px}
 .nav-lado.dir{justify-content:flex-end}
-.nav-lado a,.nav-mobile a{font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}
-.nav-lado a:hover{color:var(--verm)}
+.nav-lado a,.nav-mobile a{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.nav-lado a:hover{color:var(--oliva)}
 .logo{font-family:var(--serifa);font-size:24px;text-decoration:none;white-space:nowrap}
-.logo .estrela{color:var(--verm);margin-left:4px;font-size:18px}
-.nav-btn{display:none;justify-self:end;background:var(--papel);border:2px solid var(--vinho);border-radius:999px;padding:8px 16px;font:700 13px var(--texto);color:var(--vinho);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
-.nav-mobile{display:flex;flex-direction:column;gap:4px;padding:6px 16px 16px;background:var(--rosa)}
+.logo .flor-logo{color:var(--oliva);margin-left:5px;font-size:19px}
+.nav-btn{display:none;justify-self:end;background:var(--papel);border:2px solid var(--verde);border-radius:999px;padding:8px 16px;font:700 13px var(--texto);color:var(--verde);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.nav-mobile{display:flex;flex-direction:column;gap:2px;padding:6px 16px 16px;background:var(--amarelo-claro)}
 .nav-mobile[hidden]{display:none}
-.nav-mobile a{padding:10px 4px;border-bottom:1px solid var(--rosa2)}
+.nav-mobile a{padding:10px 4px;border-bottom:1px solid var(--amarelo)}
 
 /* ---------- capa ---------- */
 .capa{padding:70px 0 80px;position:relative}
@@ -75,56 +81,58 @@ section{scroll-margin-top:84px}
 .capa-txt{position:relative}
 .sobrelinha{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
 .capa-nome{font-size:clamp(46px,6.4vw,84px);line-height:.95;letter-spacing:-.01em}
-.capa-nichos{font-family:var(--serifa);font-style:italic;color:var(--verm);font-size:clamp(19px,2vw,24px);margin-top:14px}
-.capa-frase{margin-top:14px;max-width:56ch;font-size:15.5px}
+.capa-nichos{font-family:var(--serifa);font-style:italic;color:var(--oliva);font-size:clamp(21px,2.1vw,25px);margin-top:14px}
+.capa-frase{margin-top:14px;max-width:50ch;font-size:16px}
 .provas{list-style:none;display:flex;flex-wrap:wrap;gap:18px;padding:0;margin:26px 0 0}
 .prova{display:flex;flex-direction:column;align-items:center;width:112px;text-align:center}
 .prova-selo{position:relative;width:96px;height:96px;display:grid;place-items:center}
 .prova-selo svg{position:absolute;inset:0;width:100%;height:100%}
 .prova-selo b{position:relative;font-family:var(--serifa);font-weight:500;font-size:25px}
 .prova-txt{font-size:13px;font-weight:500;margin-top:6px;line-height:1.3}
-.seta-mao{position:absolute;right:-30px;bottom:-6px;width:150px;color:var(--vinho)}
+.seta-mao{position:absolute;right:-30px;bottom:-6px;width:150px;color:var(--verde)}
 .capa-foto{position:relative;max-width:400px;justify-self:center;width:100%}
-.polaroid{position:relative;margin:0;background:#fff;padding:10px 10px 14px;box-shadow:0 12px 26px rgba(122,20,48,.17);transform:rotate(var(--rot,0deg))}
-.fita{position:absolute;top:-13px;left:50%;width:86px;height:26px;transform:translateX(-50%) rotate(-4deg);background:rgba(244,143,177,.6);z-index:2}
+.polaroid{position:relative;margin:0;background:#fff;padding:10px 10px 14px;box-shadow:0 12px 26px var(--sombra);transform:rotate(var(--rot,0deg))}
+.fita{position:absolute;top:-13px;left:50%;width:86px;height:26px;transform:translateX(-50%) rotate(-4deg);background:rgba(232,201,74,.62);z-index:2}
 .polaroid-capa{--rot:2.5deg;padding:14px 14px 18px}
-.polaroid-capa .fita.f1{left:14%;transform:rotate(-28deg);background:rgba(210,40,58,.55)}
-.polaroid-capa .fita.f2{left:auto;right:-16px;transform:rotate(32deg);background:rgba(244,143,177,.65)}
+.polaroid-capa .fita.f1{left:14%;transform:rotate(-28deg);background:rgba(143,122,42,.55)}
+.polaroid-capa .fita.f2{left:auto;right:-16px;transform:rotate(32deg);background:rgba(232,201,74,.7)}
 .foto-box{aspect-ratio:4/5;overflow:hidden;background:var(--linha)}
 .foto-box img{width:100%;height:100%;object-fit:cover}
-.etiqueta-papel{display:inline-block;margin-top:12px;background:var(--creme);border:1.5px solid var(--vinho);padding:5px 12px;font-size:13px;border-radius:4px;transform:rotate(-1.5deg)}
-.bilhete{position:absolute;right:-26px;bottom:62px;background:var(--papel);border:1.5px solid var(--linha);padding:8px 14px;font-family:var(--mao);font-weight:700;font-size:22px;transform:rotate(-6deg);box-shadow:0 6px 14px rgba(122,20,48,.14);z-index:3}
-.selo-brilho{position:absolute;left:-74px;top:36%;width:144px;height:144px;z-index:4}
-.selo-brilho svg{width:100%;height:100%}
-.selo-brilho .gira{transform-origin:50% 50%;transform-box:view-box;animation:girar 30s linear infinite}
-.selo-brilho .cereja{position:absolute;inset:0;display:grid;place-items:center;font-size:34px}
+.etiqueta-papel{display:inline-block;margin-top:12px;background:var(--creme);border:1.5px solid var(--verde);padding:5px 12px;font-size:13px;border-radius:4px;transform:rotate(-1.5deg)}
+.selo-anel{position:absolute;left:-74px;top:36%;width:144px;height:144px;z-index:4}
+.selo-anel svg{width:100%;height:100%}
+.selo-anel .gira{transform-origin:50% 50%;transform-box:view-box;animation:girar 30s linear infinite}
+.selo-anel .miolo{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;color:var(--amarelo)}
 @keyframes girar{to{transform:rotate(360deg)}}
-.adesivo{position:absolute;font-size:34px;animation:balanco 3.2s ease-in-out infinite;transform-origin:50% 0;z-index:5;filter:drop-shadow(0 3px 2px rgba(122,20,48,.2))}
+.adesivo{position:absolute;font-size:34px;animation:balanco 3.2s ease-in-out infinite;transform-origin:50% 0;z-index:5;filter:drop-shadow(0 3px 2px var(--sombra))}
 .adesivo:nth-child(2n){animation-duration:4s;animation-delay:-1s}
 @keyframes balanco{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
 
+/* ---------- folha de caderno ---------- */
+.caderno{position:relative;background-color:var(--papel);border-radius:8px;padding:64px clamp(20px,5vw,56px) 46px;box-shadow:0 16px 34px rgba(0,0,0,.2);
+  background-image:radial-gradient(circle,var(--furo,var(--oliva)) 7px,transparent 7.5px);background-size:44px 44px;background-repeat:repeat-x;background-position:18px 6px}
+
 /* ---------- sobre ---------- */
-.sobre{background:var(--verm);padding:76px 0}
-.caderno{position:relative;background-color:var(--creme);border-radius:8px;padding:64px clamp(20px,5vw,56px) 46px;box-shadow:0 16px 34px rgba(0,0,0,.2);
-  background-image:radial-gradient(circle,var(--furo,var(--verm)) 7px,transparent 7.5px);background-size:44px 44px;background-repeat:repeat-x;background-position:18px 6px}
+.sobre{background:var(--oliva);padding:76px 0}
 .sobre-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center}
 .sobre-txt p+p{margin-top:12px}
+.sobre-txt p{font-size:17px}
 .sobre-txt h2{margin-bottom:18px}
 .polaroid-sobre{--rot:-3deg;max-width:300px;justify-self:center;width:100%}
 .polaroid-sobre figcaption{font-family:var(--mao);font-weight:700;font-size:21px;text-align:center;margin-top:8px}
-.difs{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--vinho);border-radius:14px;overflow:hidden;margin-top:34px}
-.dif{padding:20px;border-left:2px solid var(--vinho);background:var(--papel)}
-.dif:first-child{background:var(--vinho);color:var(--creme);border-left:0}
+.difs{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--verde);border-radius:14px;overflow:hidden;margin-top:34px}
+.dif{padding:20px;border-left:2px solid var(--verde);background:var(--papel)}
+.dif:first-child{background:var(--verde);color:var(--creme);border-left:0}
 .dif b{display:block;font-family:var(--serifa);font-weight:500;font-size:20px;margin-bottom:6px}
+.dif:first-child b{color:var(--amarelo)}
 .dif span{font-size:15px}
-.pilula{display:inline-flex;align-items:center;gap:8px;background:var(--rosa);color:var(--vinho);border:1.5px solid var(--vinho);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;margin-top:24px}
 
 /* ---------- faixa de marcas ---------- */
-.faixa-marcas{background:var(--vinho);color:var(--rosa);overflow:hidden;padding:14px 0}
-.faixa-trilho{display:flex;width:max-content;animation:rolar 40s linear infinite}
-.faixa-item{display:flex;align-items:center;gap:30px;padding-right:30px;font-family:var(--serifa);font-size:20px;white-space:nowrap}
+.faixa-marcas{background:var(--verde);color:var(--creme);overflow:hidden;padding:15px 0}
+.faixa-trilho{display:flex;width:max-content;animation:rolar 60s linear infinite}
+.faixa-item{display:flex;align-items:center;gap:28px;padding-right:28px;font-family:var(--serifa);font-size:20px;white-space:nowrap}
 .faixa-item img{height:30px;width:auto;filter:brightness(0) invert(1);opacity:.9}
-.faixa-item i{font-style:normal;color:var(--rosa2);font-size:15px}
+.faixa-item i{font-style:normal;color:var(--amarelo);font-size:16px}
 @keyframes rolar{to{transform:translateX(-50%)}}
 
 /* ---------- destaques ---------- */
@@ -132,130 +140,187 @@ section{scroll-margin-top:84px}
 .destaques>*{min-width:0}
 .dest-esq{background:var(--creme);padding:80px clamp(24px,4vw,64px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .dest-esq p{margin-top:14px;max-width:38ch}
-.dest-dir{background:repeating-linear-gradient(90deg,var(--rosa) 0 30px,var(--papel) 30px 60px);display:flex;align-items:center;justify-content:center;padding:70px 26px}
+.dest-dir{background:repeating-linear-gradient(90deg,var(--amarelo-claro) 0 30px,var(--papel) 30px 60px);display:flex;align-items:center;justify-content:center;padding:70px 26px}
 .dest-trilho{display:flex;align-items:center;justify-content:center;gap:22px;width:100%;max-width:700px}
 .dcard{width:29%;flex:none}
 .dcard:nth-child(1){order:2;width:36%;--rot:-1.5deg;z-index:2}
 .dcard:nth-child(2){order:1;--rot:-4deg}
 .dcard:nth-child(3){order:3;--rot:3.5deg}
 .dcard figcaption{margin-top:9px;text-align:center}
-.dcard .tit{display:block;font-family:var(--mao);font-weight:700;font-size:21px;line-height:1.1}
+.dcard .tit{display:block;font-family:var(--mao);font-weight:700;font-size:22px;line-height:1.1}
 .dcard .tags{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
-.dcard .vazio-txt{opacity:.7}
 .selo-res{position:absolute;top:-30px;right:-30px;width:96px;height:96px;display:grid;place-items:center;z-index:3;transform:rotate(10deg)}
 .selo-res svg{position:absolute;inset:0;width:100%;height:100%}
-.selo-res b{position:relative;color:#fff;font-size:13px;line-height:1.15;text-align:center;max-width:70px}
+.selo-res b{position:relative;color:var(--amarelo);font-size:13px;line-height:1.15;text-align:center;max-width:70px}
 
 /* ---------- vídeos ---------- */
 .vbox{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--linha);cursor:pointer}
 .vbox video{width:100%;height:100%;object-fit:cover}
 .vbox.vazio{cursor:default}
-.vplay{position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--papel);color:var(--vinho);display:grid;place-items:center;font-size:15px;box-shadow:0 3px 8px rgba(0,0,0,.2);pointer-events:none}
+.vplay{position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--papel);color:var(--verde);display:grid;place-items:center;font-size:15px;box-shadow:0 3px 8px rgba(0,0,0,.2);pointer-events:none}
 
-.xadrez{height:28px;background:repeating-conic-gradient(var(--vinho) 0 25%,var(--rosa) 0 50%) 0 0/28px 28px}
+.xadrez{height:28px;background:repeating-conic-gradient(var(--verde) 0 25%,var(--amarelo) 0 50%) 0 0/28px 28px}
 
-/* ---------- nichos ---------- */
-.nichos{background:var(--lilas);padding:80px 0 90px}
-.nichos-topo{text-align:center}
-.atalhos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0 46px}
-.atalhos a{border:2px solid var(--vinho);background:var(--papel);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;text-decoration:none}
-.atalhos a:hover{background:var(--rosa)}
-.pag-borda{filter:drop-shadow(4px 5px 0 var(--vinho));scroll-margin-top:90px}
-.pag-borda+.pag-borda{margin-top:44px}
-.pagina{--r:9px;background:var(--creme);padding:40px clamp(20px,4vw,46px) 34px;
+/* ---------- cartão com borda ondulada (nichos e valores) ---------- */
+.onda-borda{filter:drop-shadow(4px 5px 0 var(--verde))}
+.onda{--r:9px;background:var(--papel);
   -webkit-mask:radial-gradient(var(--r) at 50% 50%,#000 98%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round,linear-gradient(#000 0 0) 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat;
           mask:radial-gradient(var(--r) at 50% 50%,#000 98%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round,linear-gradient(#000 0 0) 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat}
+
+/* ---------- nichos ---------- */
+.nichos{background:var(--salvia);padding:80px 0 90px}
+.atalhos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:26px 0 46px}
+.atalhos a{border:2px solid var(--verde);background:var(--papel);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;text-decoration:none}
+.atalhos a:hover{background:var(--amarelo-claro)}
+.atalhos a span{color:var(--oliva);margin-right:6px}
+.pag-borda{scroll-margin-top:90px}
+.pag-borda+.pag-borda{margin-top:44px}
+.pagina{padding:40px clamp(20px,4vw,46px) 34px}
 .pag-topo{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
-.pag-num{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--rosa);border-radius:999px;padding:4px 12px}
-.pag-topo h3{font-size:clamp(30px,4vw,44px);margin-top:8px;text-transform:capitalize}
-.pag-qtd{font-size:22px;color:var(--verm)}
+.pag-num{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--amarelo-claro);border-radius:999px;padding:4px 12px}
+.pag-topo h3{font-size:clamp(30px,4vw,44px);margin-top:8px}
+.pag-qtd{font-size:22px;color:var(--oliva)}
 .setas{display:flex;gap:10px}
-.seta-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--vinho);color:var(--creme);font-size:20px;cursor:pointer;display:grid;place-items:center}
-.seta-btn:hover{background:var(--verm)}
-.aviso{margin-top:14px;display:inline-block;font-size:13px;background:var(--papel);border:1.5px dashed var(--verm);color:var(--verm);border-radius:8px;padding:6px 12px}
-.carrossel{--gap:20px;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*var(--gap))/4);gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 6px 18px;margin-top:8px;scrollbar-width:thin;scrollbar-color:var(--rosa2) transparent;cursor:grab}
+.seta-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--verde);color:var(--creme);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.seta-btn:hover{background:var(--oliva)}
+.aviso{margin-top:14px;display:inline-block;font-size:13px;background:var(--papel);border:1.5px dashed var(--oliva);color:var(--verde);border-radius:8px;padding:6px 12px}
+.carrossel{--gap:20px;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*var(--gap))/4);gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 6px 18px;margin-top:8px;scrollbar-width:thin;scrollbar-color:var(--oliva) transparent;cursor:grab}
 .carrossel.arrastando{scroll-snap-type:none;cursor:grabbing;user-select:none}
 .ncard{scroll-snap-align:start}
 .ncard:nth-child(4n+1){--rot:-2deg}.ncard:nth-child(4n+2){--rot:1.5deg}.ncard:nth-child(4n+3){--rot:-1deg}.ncard:nth-child(4n){--rot:2deg}
 .ncard figcaption{font-family:var(--mao);font-weight:700;font-size:19px;text-align:center;margin-top:7px;min-height:1.2em;line-height:1.15}
 .ncard .lacuna{aspect-ratio:9/16;height:auto}
 
+/* ---------- galeria ---------- */
+.galeria{background:var(--creme);padding:84px 0 90px}
+.fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 26px;margin-top:46px}
+.gcard:nth-child(4n+1){--rot:-2.5deg}.gcard:nth-child(4n+2){--rot:1.8deg}.gcard:nth-child(4n+3){--rot:-1.2deg}.gcard:nth-child(4n){--rot:2.4deg}
+.gcard .fbox{aspect-ratio:4/5;overflow:hidden;background:var(--linha);cursor:zoom-in}
+.gcard .fbox img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gcard .fbox:hover img{transform:scale(1.04)}
+.gcard figcaption{font-family:var(--mao);font-weight:700;font-size:20px;text-align:center;margin-top:8px;line-height:1.1}
+
+/* ---------- métricas ---------- */
+.metricas{background:var(--verde);color:var(--creme);padding:84px 0 90px}
+.metricas .etiqueta{background:var(--amarelo);border-color:var(--amarelo)}
+.metricas h2{color:var(--creme)}
+.redes{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:46px}
+.rede{position:relative;background:var(--papel);color:var(--verde);padding:34px 28px 28px;border-radius:6px;box-shadow:0 14px 30px rgba(0,0,0,.3);transform:rotate(var(--rot))}
+.rede:nth-child(1){--rot:-1deg}.rede:nth-child(2){--rot:1deg}
+.rede-topo{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--verde);padding-bottom:12px}
+.rede-topo h3{font-size:28px}
+.rede-topo a{font-size:13px;font-weight:700}
+.periodo{font-family:var(--mao);font-weight:700;font-size:20px;color:var(--oliva);width:100%}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:6px}
+.num{padding:14px 4px;border-bottom:1px dashed var(--linha)}
+.num b{display:block;font-family:var(--serifa);font-weight:500;font-size:30px;line-height:1.05}
+.num span{font-size:13.5px}
+.num.forte b{font-size:40px;color:var(--verde)}
+.num.forte{background:linear-gradient(transparent 62%,var(--amarelo-claro) 62%)}
+.publico{margin-top:18px}
+.publico h4{margin:0 0 10px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.barra{display:grid;grid-template-columns:1fr auto;gap:2px 10px;font-size:14px;margin-bottom:9px}
+.barra i{grid-column:1/-1;height:8px;border-radius:99px;background:var(--linha);overflow:hidden}
+.barra i::before{content:"";display:block;height:100%;width:var(--p);background:var(--oliva);border-radius:99px}
+.nota-met{margin-top:34px;text-align:center;font-size:14px;opacity:.9}
+
 /* ---------- o que as marcas falam ---------- */
 .feedback{padding:84px 0}
-.feedback .topo-sec{text-align:center}
 .bilhetes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:44px}
-.bilhete-card{position:relative;margin:0;padding:34px 24px 22px;box-shadow:0 10px 22px rgba(122,20,48,.14);transform:rotate(var(--rot))}
-.bilhete-card:nth-child(1){background:var(--rosa);--rot:-2deg}
-.bilhete-card:nth-child(2){background:var(--lilas);--rot:1.5deg}
-.bilhete-card:nth-child(3){background:var(--pessego);--rot:-1deg}
+.bilhete-card{position:relative;margin:0;padding:34px 24px 22px;box-shadow:0 10px 22px var(--sombra);transform:rotate(var(--rot))}
+.bilhete-card:nth-child(1){background:var(--amarelo-claro);--rot:-2deg}
+.bilhete-card:nth-child(2){background:var(--salvia);--rot:1.5deg}
+.bilhete-card:nth-child(3){background:var(--amarelo);--rot:-1deg}
 .bilhete-card blockquote{margin:0;font-family:var(--serifa);font-size:19px;line-height:1.35}
 .bilhete-card img{width:100%;border-radius:4px}
 .bilhete-card figcaption{margin-top:14px}
-.bilhete-card .marca{font-family:var(--mao);font-weight:700;font-size:24px;display:block}
+.bilhete-card .marca{font-family:var(--mao);font-weight:700;font-size:26px;display:block}
 .bilhete-card .det{font-size:13px}
-.marcas-tit{text-align:center;margin-top:60px;font-size:24px}
-.marcas-lista{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0;margin:18px 0 0}
-.marcas-lista li{background:var(--papel);border:2px solid var(--vinho);border-radius:999px;padding:8px 18px;font-family:var(--serifa);font-size:17px}
+
+/* ---------- valores ---------- */
+.valores{background:var(--salvia);padding:84px 0 90px}
+.grupo-tit{font-family:var(--mao);font-weight:700;font-size:28px;margin:44px 0 18px;text-align:center}
+.planos{display:flex;flex-wrap:wrap;justify-content:center;gap:28px}
+.plano-borda{width:calc((100% - 56px)/3);min-width:250px;max-width:340px}
+.plano{height:100%;padding:34px 26px 28px;display:flex;flex-direction:column}
+.plano h3{font-size:24px}
+.preco{margin-top:10px;font-family:var(--serifa);font-size:36px;line-height:1}
+.preco s{font-size:18px;color:var(--oliva);margin-right:8px}
+.plano ul{list-style:none;padding:0;margin:18px 0 22px;flex:1}
+.plano li{padding:7px 0 7px 26px;position:relative;font-size:15px;border-bottom:1px dashed var(--linha)}
+.plano li::before{content:"✓";position:absolute;left:2px;color:var(--oliva);font-weight:700}
+.plano .btn{width:100%}
+.plano.destaque{background:var(--verde);color:var(--creme)}
+.plano.destaque li{border-color:rgba(233,229,218,.25)}
+.plano.destaque li::before,.plano.destaque .preco s{color:var(--amarelo)}
+.plano.destaque .btn{background:var(--amarelo);color:var(--verde);border-color:var(--amarelo);box-shadow:3px 3px 0 var(--oliva)}
+.selo-rec{display:inline-block;align-self:flex-start;background:var(--amarelo);color:var(--verde);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:4px 12px;margin-bottom:10px}
+.nota-valores{text-align:center;margin-top:38px;font-size:15px}
 
 /* ---------- contato ---------- */
-.contato{background:repeating-linear-gradient(90deg,var(--rosa) 0 30px,var(--papel) 30px 60px);padding:80px 0 90px}
-.contato .caderno{--furo:var(--rosa);max-width:860px;margin:0 auto;text-align:center}
-.chamado{font-size:28px;color:var(--verm);margin-top:10px}
+.contato{background:repeating-linear-gradient(90deg,var(--amarelo-claro) 0 30px,var(--papel) 30px 60px);padding:80px 0 90px}
+.contato .caderno{--furo:var(--amarelo-claro);max-width:860px;margin:0 auto;text-align:center}
+.chamado{font-size:28px;color:var(--oliva);margin-top:10px}
 .contato .botoes{justify-content:center}
-.orcamento{margin:40px auto 0;max-width:640px;text-align:left;background:var(--papel);border:2px solid var(--vinho);border-radius:16px;padding:24px}
+.orcamento{margin:40px auto 0;max-width:640px;text-align:left;background:var(--papel);border:2px solid var(--verde);border-radius:16px;padding:24px}
 .orcamento h3{font-size:24px;margin-bottom:14px}
 .campos{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
 .campos label{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:700}
 .campos label:last-child{grid-column:1/-1}
-.campos input{font:16px var(--texto);color:var(--vinho);background:#fff;border:1.5px solid var(--rosa2);border-radius:10px;padding:11px 12px}
-.campos input:focus{border-color:var(--vinho);outline:none;box-shadow:0 0 0 3px var(--rosa)}
+.campos input{font:16px var(--texto);color:var(--verde);background:#fff;border:1.5px solid var(--linha);border-radius:10px;padding:11px 12px}
+.campos input:focus{border-color:var(--verde);outline:none;box-shadow:0 0 0 3px var(--amarelo-claro)}
 .gotcha{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .orcamento .btn{margin-top:16px;width:100%}
 .form-msg{margin-top:12px;font-size:15px}
 .form-ok{font-family:var(--serifa);font-size:24px;text-align:center;padding:20px 0}
 .duvidas-tit{margin-top:48px;font-size:26px}
-.duvidas{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--vinho);border-radius:14px;overflow:hidden;margin-top:18px;text-align:left}
+.duvidas{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--verde);border-radius:14px;overflow:hidden;margin-top:18px;text-align:left}
 .duvida{padding:18px 20px;background:var(--papel)}
-.duvida:nth-child(odd){border-right:2px solid var(--vinho)}
-.duvida:nth-child(-n+2){border-bottom:2px solid var(--vinho)}
+.duvida:nth-child(odd){border-right:2px solid var(--verde)}
+.duvida:nth-child(-n+2){border-bottom:2px solid var(--verde)}
 .duvida b{display:block;font-family:var(--serifa);font-weight:500;font-size:18px;margin-bottom:6px}
 .duvida span{font-size:15px}
 
 /* ---------- rodapé ---------- */
-.rodape{position:relative;background:var(--vinho);color:var(--creme);text-align:center;padding:48px 16px 96px;margin-top:12px}
-.rodape::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:12px;background:radial-gradient(circle at 12px 12px,var(--vinho) 11.5px,transparent 12px) 0 0/24px 12px repeat-x}
+.rodape{position:relative;background:var(--verde);color:var(--creme);text-align:center;padding:48px 16px 96px;margin-top:12px}
+.rodape::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:12px;background:radial-gradient(circle at 12px 12px,var(--verde) 11.5px,transparent 12px) 0 0/24px 12px repeat-x}
 .rod-nome{font-family:var(--serifa);font-size:28px}
 .rodape p+p{margin-top:6px;font-size:14px}
-.rodape .mao{color:var(--rosa);font-size:24px}
+.rodape .mao{color:var(--amarelo);font-size:24px}
 
 /* ---------- WhatsApp fixo ---------- */
-.wa-fixo{position:fixed;right:16px;bottom:16px;z-index:60;width:52px;height:52px;border-radius:50%;background:var(--verm);color:#fff;display:grid;place-items:center;border:2px solid var(--vinho);box-shadow:3px 3px 0 var(--vinho)}
+.wa-fixo{position:fixed;right:16px;bottom:16px;z-index:60;width:52px;height:52px;border-radius:50%;background:var(--amarelo);color:var(--verde);display:grid;place-items:center;border:2px solid var(--verde);box-shadow:3px 3px 0 var(--verde)}
 .wa-fixo svg{width:26px;height:26px}
 
 /* ---------- player ---------- */
-.player{position:fixed;inset:0;z-index:100;background:rgba(45,6,18,.86);display:flex;align-items:center;justify-content:center;padding:20px}
-.player[hidden]{display:none}
+.player{position:fixed;inset:0;z-index:100;background:rgba(15,24,19,.88);display:flex;align-items:center;justify-content:center;padding:20px}
+.player[hidden],.player [hidden]{display:none}
 .player-caixa{position:relative;display:flex;flex-direction:column;align-items:center}
 .player video{height:min(84vh,calc(92vw*16/9));width:auto;max-width:92vw;aspect-ratio:9/16;background:#000;border-radius:10px}
+.player img{max-height:84vh;max-width:92vw;border-radius:10px;background:#000}
 .player-tit{color:var(--creme);margin-top:10px;font-family:var(--mao);font-size:22px}
-.player-x{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border-radius:50%;border:2px solid var(--vinho);background:var(--creme);color:var(--vinho);font-size:24px;cursor:pointer;line-height:1}
+.player-x{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border-radius:50%;border:2px solid var(--verde);background:var(--creme);color:var(--verde);font-size:24px;cursor:pointer;line-height:1}
 
 /* ---------- responsivo ---------- */
-@media (max-width:980px){
+@media (max-width:1120px){
   .nav-lado{display:none}
   .nav{grid-template-columns:1fr auto}
   .nav-btn{display:inline-block}
+}
+@media (min-width:1121px){ .nav-mobile{display:none!important} }
+@media (max-width:980px){
   .destaques{grid-template-columns:minmax(0,1fr)}
   .dest-esq{padding:64px 28px 40px}
   .carrossel{grid-auto-columns:calc((100% - var(--gap))/2)}
+  .fotos{grid-template-columns:repeat(3,1fr)}
+  .redes{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .plano-borda{width:calc((100% - 28px)/2)}
 }
-@media (min-width:981px){ .nav-mobile{display:none!important} }
 @media (max-width:860px){
   .capa-grid,.sobre-grid{grid-template-columns:1fr}
   .seta-mao{display:none}
   .capa-foto{max-width:360px}
-  .selo-brilho{left:-30px;top:-34px}
-  .bilhete{right:-8px}
+  .selo-anel{left:-30px;top:-34px}
   .bilhetes{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
 }
 @media (max-width:520px){
@@ -263,8 +328,7 @@ section{scroll-margin-top:84px}
   .capa{padding:42px 0 60px}
   .adesivo{display:none}
   .capa-foto{max-width:300px;margin-top:20px}
-  .selo-brilho{left:-14px;top:-40px}
-  .bilhete{right:-4px;bottom:72px;font-size:20px}
+  .selo-anel{left:-14px;top:-40px}
   .provas{gap:8px;justify-content:space-between}
   .prova{width:31%}
   .prova-selo{width:84px;height:84px}
@@ -273,20 +337,27 @@ section{scroll-margin-top:84px}
   .sobre,.contato{padding:52px 0}
   .caderno{padding:56px 18px 34px}
   .difs{grid-template-columns:1fr}
-  .dif{border-left:0;border-top:2px solid var(--vinho)}
+  .dif{border-left:0;border-top:2px solid var(--verde)}
   .dif:first-child{border-top:0}
   .dest-esq{padding:52px 16px 30px}
   .dest-dir{padding:46px 0 34px;display:block}
   .dest-trilho{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 16px 16px;gap:18px}
   .dcard,.dcard:nth-child(1){width:72%;order:0;scroll-snap-align:center}
   .selo-res{right:-6px}
-  .nichos,.feedback{padding:56px 0}
+  .nichos,.feedback,.galeria,.metricas,.valores{padding:56px 0}
   .pagina{padding:34px 16px 26px}
   .carrossel{--gap:14px;grid-auto-columns:78%}
+  .fotos{grid-template-columns:repeat(2,1fr);gap:24px 14px}
+  .gcard{padding:7px 7px 10px}
+  .gcard figcaption{font-size:17px}
+  .rede{padding:30px 18px 22px}
+  .num b{font-size:26px}
+  .num.forte b{font-size:32px}
+  .plano-borda{width:100%;max-width:none}
   .campos{grid-template-columns:1fr}
   .duvidas{grid-template-columns:1fr}
   .duvida:nth-child(odd){border-right:0}
-  .duvida:not(:last-child){border-bottom:2px solid var(--vinho)}
+  .duvida:not(:last-child){border-bottom:2px solid var(--verde)}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -298,24 +369,27 @@ section{scroll-margin-top:84px}
 
 <header class="topo">
   <nav class="nav" aria-label="Menu principal">
-    <div class="nav-lado esq"><a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a></div>
-    <a class="logo" href="#inicio"><span id="logoNome"></span><span class="estrela" aria-hidden="true">✦</span></a>
-    <div class="nav-lado dir"><a href="#feedback">O que as marcas falam</a><a href="#contato">Contato</a></div>
+    <div class="nav-lado esq"><a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a><a href="#galeria">Galeria</a></div>
+    <a class="logo" href="#inicio"><span id="logoNome"></span><span class="flor-logo" aria-hidden="true">✿</span></a>
+    <div class="nav-lado dir"><a href="#metricas">Métricas</a><a href="#feedback">Feedback</a><a href="#valores">Valores</a><a href="#contato">Contato</a></div>
     <button class="nav-btn" type="button" aria-expanded="false" aria-controls="navMobile">menu</button>
   </nav>
   <div class="nav-mobile" id="navMobile" hidden>
-    <a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a><a href="#feedback">O que as marcas falam</a><a href="#contato">Contato</a>
+    <a href="#sobre">Sobre mim</a><a href="#destaques">Destaques</a><a href="#nichos">Nichos</a><a href="#galeria">Galeria</a><a href="#metricas">Métricas</a><a href="#feedback">O que as marcas falam</a><a href="#valores">Valores</a><a href="#contato">Contato</a>
   </div>
 </header>
 
 <main>
   <section id="inicio" class="capa quadriculado"></section>
   <section id="sobre" class="sobre"></section>
-  <div id="faixaMarcas" class="faixa-marcas" aria-label="Marcas que já atendi"></div>
+  <div id="faixaMarcas" class="faixa-marcas" aria-label="Marcas com quem já trabalhei"></div>
   <section id="destaques" class="destaques"></section>
   <div class="xadrez" aria-hidden="true"></div>
   <section id="nichos" class="nichos"></section>
+  <section id="galeria" class="galeria"></section>
+  <section id="metricas" class="metricas"></section>
   <section id="feedback" class="feedback quadriculado"></section>
+  <section id="valores" class="valores"></section>
   <section id="contato" class="contato"></section>
 </main>
 <footer class="rodape" id="rodape"></footer>
@@ -324,11 +398,12 @@ section{scroll-margin-top:84px}
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 9.5c.3 2 2.2 4 4.5 4.6l1-1.1 2 .8-.4 1.6c-3.8.3-7.4-3.2-7.2-7l1.6-.4.8 2z" fill="currentColor" stroke="none"/></svg>
 </a>
 
-<div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Vídeo">
+<div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Mídia ampliada">
   <div class="player-caixa">
-    <video controls playsinline></video>
+    <video controls playsinline hidden></video>
+    <img alt="" hidden>
     <p class="player-tit"></p>
-    <button class="player-x" type="button" aria-label="Fechar vídeo">×</button>
+    <button class="player-x" type="button" aria-label="Fechar">×</button>
   </div>
 </div>
 
@@ -343,6 +418,7 @@ const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 const slug = t => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-');
 const primeiroNome = () => (DADOS.nome || '').split(' ')[0];
+const COR = { verde: '#1b2b22', oliva: '#8f7a2a', creme: '#e9e5da', amarelo: '#e8c94a', claro: '#f3e3a0' };
 
 /* Selo ondulado (flor/carimbo) em SVG */
 function florPath(n = 14, r = 41) {
@@ -359,14 +435,14 @@ function florPath(n = 14, r = 41) {
 const flor = (cor, n) => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="${florPath(n)}" fill="${cor}"/></svg>`;
 
 /* Lacuna listrada com ícone e dica */
-const lacuna = (ico, dica, cls = '') => `<div class="lacuna ${cls}"><span class="lac-ico" aria-hidden="true">${ico}</span><span class="lac-dica">${esc(dica)}</span></div>`;
+const lacuna = (ico, dica) => `<div class="lacuna"><span class="lac-ico" aria-hidden="true">${ico}</span><span class="lac-dica">${esc(dica)}</span></div>`;
 
 /* Foto: se o arquivo não existir, vira lacuna */
 function foto(src, alt, ico, dica) {
   if (!src) return lacuna(ico, dica);
   return `<img src="${esc(src)}" alt="${esc(alt)}" data-ico="${ico}" data-dica="${esc(dica)}" onerror="semFoto(this)">`;
 }
-function semFoto(img) { img.parentElement.innerHTML = lacuna(img.dataset.ico, img.dataset.dica); }
+function semFoto(img) { const box = img.parentElement; box.classList.add('vazio'); box.innerHTML = lacuna(img.dataset.ico, img.dataset.dica); }
 
 /* Vídeo: miniatura com #t=0.1; se faltar o arquivo, vira lacuna */
 const linkExterno = s => /instagram\.com|tiktok\.com|drive\.google|youtu/i.test(s);
@@ -387,14 +463,15 @@ function semVideo(v) {
 }
 
 /* Links de contato */
-function linkWhats() {
+function linkWhats(assunto) {
   let n = String(DADOS.whatsapp || '').replace(/\D/g, '');
-  if (!n) return `mailto:${DADOS.email}?subject=${encodeURIComponent('Vídeos UGC pra minha marca')}`;
+  if (!n) return `mailto:${DADOS.email}?subject=${encodeURIComponent(assunto || 'Vídeos UGC pra minha marca')}`;
   if (n.length <= 11) n = '55' + n;
-  const msg = `Oi, ${primeiroNome()}! Vi seu portfólio e quero conversar sobre vídeos pra minha marca.`;
+  const msg = assunto
+    ? `Oi, ${primeiroNome()}! Vi seu portfólio e quero conversar sobre o ${assunto}.`
+    : `Oi, ${primeiroNome()}! Vi seu portfólio e quero conversar sobre vídeos pra minha marca.`;
   return `https://wa.me/${n}?text=${encodeURIComponent(msg)}`;
 }
-const linkInsta = () => 'https://instagram.com/' + String(DADOS.instagram || '').replace(/^@/, '');
 const formOk = () => /^https:\/\/formspree\.io\/f\/\w+/.test(DADOS.formspree || '');
 
 /* ------------------------- MONTAGEM ------------------------- */
@@ -406,60 +483,56 @@ function montar() {
   if (!D.whatsapp) $('#waFixo').setAttribute('aria-label', 'Mandar e-mail');
 
   /* 1. CAPA */
-  const cores = [['#F9A27C', '#7A1430'], ['#7A1430', '#FDF6EE'], ['#F9C9D6', '#7A1430']];
+  const cores = [[COR.amarelo, COR.verde], [COR.verde, COR.amarelo], [COR.oliva, '#ffffff']];
   $('#inicio').innerHTML = `
   <div class="wrap capa-grid">
     <div class="capa-txt">
-      <p class="sobrelinha">(UGC creator · brilho da Rafa Chagas)</p>
+      <p class="sobrelinha">(${esc(D.titulo)} · ${esc(D.cidade)})</p>
       <h1 class="capa-nome">${esc(D.nome)}</h1>
-      <p class="capa-nichos">UGC creator de ${esc(D.nichosResumo)}</p>
+      <p class="capa-nichos">UGC creator e influencer de ${esc(D.nichosResumo)}</p>
       <p class="capa-frase">${esc(D.frase)}</p>
       <ul class="provas">${D.provas.map((p, i) => `
         <li class="prova"><span class="prova-selo">${flor(cores[i % 3][0], 12)}<b style="color:${cores[i % 3][1]}">${esc(p.numero)}</b></span><span class="prova-txt">${esc(p.texto)}</span></li>`).join('')}
       </ul>
       <div class="botoes">
-        <a class="btn btn-lilas" href="#destaques">Ver meus melhores vídeos</a>
+        <a class="btn btn-amarelo" href="#destaques">Ver meus melhores vídeos</a>
         <a class="btn btn-branco" href="#contato">Falar comigo</a>
       </div>
       <svg class="seta-mao" viewBox="0 0 160 90" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M8 74c22 12 62 14 92-6 18-12 30-30 40-50"/><path d="M124 22l17-6 3 18"/></svg>
     </div>
     <div class="capa-foto">
-      <div class="selo-brilho" role="img" aria-label="Brilho: aluna Rafa Chagas">
+      <div class="selo-anel" role="img" aria-label="${esc(D.titulo)} ${esc(D.nome)}">
         <svg viewBox="0 0 100 100" aria-hidden="true"><g class="gira">
-          <path d="${florPath(16, 43)}" fill="#7A1430"/>
+          <path d="${florPath(16, 43)}" fill="${COR.verde}"/>
           <defs><path id="anelTxt" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/></defs>
-          <text fill="#F9C9D6" font-family="DM Sans, sans-serif" font-weight="700" font-size="9"><textPath href="#anelTxt" textLength="211" lengthAdjust="spacing">BRILHO ♥ ALUNA RAFA CHAGAS ♥</textPath></text>
+          <text fill="${COR.amarelo}" font-family="DM Sans, sans-serif" font-weight="700" font-size="9"><textPath href="#anelTxt" textLength="211" lengthAdjust="spacing">${esc(D.titulo.toUpperCase())} ♥ ${esc(D.nome.toUpperCase())} ♥</textPath></text>
         </g></svg>
-        <span class="cereja" aria-hidden="true">🍒</span>
+        <span class="miolo" aria-hidden="true">✿</span>
       </div>
       <figure class="polaroid polaroid-capa">
         <span class="fita f1"></span><span class="fita f2"></span>
-        <div class="foto-box">${foto(D.fotoCapa, 'Foto de ' + D.nome, '📷', 'Retrato com rosto, luz natural e ambiente real. Sem selfie: a capa mostra o seu nível · midia/capa.jpg')}</div>
+        <div class="foto-box">${foto(D.fotoCapa, 'Foto de ' + D.nome, '📷', 'Retrato com rosto, luz natural e ambiente real · midia/capa.jpg')}</div>
         <figcaption><span class="etiqueta-papel">Vídeos feitos por: <b>${esc(D.nome)}</b></span></figcaption>
       </figure>
-      <p class="bilhete">me chama pra brilhar ✦</p>
       <span class="adesivo" style="top:-26px;right:12%" aria-hidden="true">💄</span>
-      <span class="adesivo" style="top:28%;right:-38px" aria-hidden="true">✨</span>
-      <span class="adesivo" style="bottom:-20px;left:8%" aria-hidden="true">🍒</span>
-      <span class="adesivo" style="bottom:22%;left:-50px" aria-hidden="true">⭐</span>
+      <span class="adesivo" style="top:28%;right:-38px" aria-hidden="true">🌿</span>
+      <span class="adesivo" style="bottom:-20px;left:8%" aria-hidden="true">🎬</span>
+      <span class="adesivo" style="bottom:22%;left:-50px" aria-hidden="true">📸</span>
     </div>
   </div>`;
 
   /* 2. SOBRE MIM */
-  const paras = (D.sobreTexto || []).map(p => p ? `<p>${esc(p)}</p>`
-    : lacuna('✍️', 'Conte sua rotina e por que as marcas do seu nicho combinam com você (1 ou 2 frases)', 'linha')).join('');
   $('#sobre').innerHTML = `
   <div class="wrap"><div class="caderno">
     <div class="sobre-grid">
       <div class="sobre-txt">
-        <span class="etiqueta-rosa">Sobre mim</span>
+        <span class="etiqueta">Sobre mim</span>
         <h2>Prazer, eu sou a ${esc(primeiroNome())}</h2>
-        ${paras}
-        <span class="pilula">✦ Formada no Método Profissão do Futuro · aluna da Rafa Chagas</span>
+        ${(D.sobreTexto || []).filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}
       </div>
       <figure class="polaroid polaroid-sobre"><span class="fita"></span>
-        <div class="foto-box">${foto(D.fotoSobre, D.nome + ' no dia a dia', '☕', 'Você no dia a dia, na sua rotina real, com luz natural · midia/sobre.jpg')}</div>
+        <div class="foto-box">${foto(D.fotoSobre, D.nome + ' no dia a dia', '☕', 'Você no dia a dia, na sua rotina real · midia/sobre.jpg')}</div>
         <figcaption>eu no dia a dia</figcaption>
       </figure>
     </div>
@@ -467,26 +540,26 @@ function montar() {
   </div></div>`;
 
   /* Faixa de marcas (rolando devagar) */
-  const itens = D.marcas.map(m => `<span class="faixa-item">${m.logo ? `<img src="${esc(m.logo)}" alt="${esc(m.nome)}" onerror="this.replaceWith(document.createTextNode(this.alt))">` : esc(m.nome)}<i aria-hidden="true">✦</i></span>`);
+  const itens = D.marcas.map(m => `<span class="faixa-item">${m.logo ? `<img src="${esc(m.logo)}" alt="${esc(m.nome)}" onerror="this.replaceWith(document.createTextNode(this.alt))">` : esc(m.nome)}<i aria-hidden="true">✿</i></span>`);
   let fila = []; while (fila.length < 10 && itens.length) fila = fila.concat(itens);
-  $('#faixaMarcas').innerHTML = D.marcas.length ? `<div class="faixa-trilho">${fila.join('')}<span aria-hidden="true" style="display:contents">${reduzMovimento ? '' : fila.join('')}</span></div>` : '';
-  if (!D.marcas.length) $('#faixaMarcas').remove();
+  if (D.marcas.length) $('#faixaMarcas').innerHTML = `<div class="faixa-trilho">${fila.join('')}<span aria-hidden="true" style="display:contents">${reduzMovimento ? '' : fila.join('')}</span></div>`;
+  else $('#faixaMarcas').remove();
 
   /* 3. DESTAQUES */
   $('#destaques').innerHTML = `
   <div class="dest-esq">
-    <span class="etiqueta-rosa">Destaques</span>
+    <span class="etiqueta">Destaques</span>
     <h2>Meus melhores vídeos</h2>
     <p>Os três vídeos que mais mostram o meu trabalho. Toque ou clique pra assistir com som.</p>
-    <div class="botoes"><a class="btn btn-verm" href="#nichos">Ver conteúdo por nichos</a></div>
+    <div class="botoes"><a class="btn btn-verde" href="#nichos">Ver conteúdo por nichos</a></div>
   </div>
   <div class="dest-dir"><div class="dest-trilho">${D.destaques.slice(0, 3).map((v, i) => `
     <figure class="polaroid dcard"><span class="fita"></span>
-      ${v.res ? `<span class="selo-res">${flor('#D2283A', 14)}<b>${esc(v.res)}</b></span>` : ''}
-      ${videoBox(v.video, { auto: i === 0, capa: v.capa, titulo: v.titulo, dica: `Os melhores na frente, não os mais recentes · midia/destaques/${i + 1}.mp4` })}
+      ${v.res ? `<span class="selo-res">${flor(COR.verde, 14)}<b>${esc(v.res)}</b></span>` : ''}
+      ${videoBox(v.video, { auto: i === 0, capa: v.capa, titulo: v.titulo, dica: `Vídeo ${v.titulo || i + 1}: coloque o arquivo em midia/destaques/${i + 1}.mp4` })}
       <figcaption>
-        <span class="tit${v.titulo ? '' : ' vazio-txt'}">${esc(v.titulo || 'título curto do vídeo')}</span>
-        <span class="tags${v.nicho ? '' : ' vazio-txt'}">${esc(v.nicho || 'nicho')} · ${esc(v.formato || 'formato')}</span>
+        <span class="tit">${esc(v.titulo || 'título curto do vídeo')}</span>
+        <span class="tags">${[v.nicho, v.formato].filter(Boolean).map(esc).join(' · ')}</span>
       </figcaption>
     </figure>`).join('')}
   </div></div>`;
@@ -494,19 +567,19 @@ function montar() {
   /* 4. NICHOS (uma página por nicho, com carrossel) */
   $('#nichos').innerHTML = `
   <div class="wrap">
-    <div class="nichos-topo">
-      <span class="etiqueta-rosa">Conteúdo por nichos</span>
+    <div class="centro">
+      <span class="etiqueta">Conteúdo por nichos</span>
       <h2>Ache o vídeo do seu nicho</h2>
-      <nav class="atalhos" aria-label="Atalhos dos nichos">${D.nichos.map(n => `<a href="#nicho-${slug(n.nome)}">${esc(n.nome)}</a>`).join('')}</nav>
+      <nav class="atalhos" aria-label="Atalhos dos nichos">${D.nichos.map((n, i) => `<a href="#nicho-${slug(n.nome)}"><span>${String(i + 1).padStart(2, '0')}</span>${esc(n.nome)}</a>`).join('')}</nav>
     </div>
     ${D.nichos.map((n, i) => {
       const vids = (n.videos || []).map(v => typeof v === 'string' ? { video: v } : v);
-      const pasta = `midia/nichos/${n.nome}/`;
-      let cards = vids.map(v => `<figure class="polaroid ncard"><span class="fita"></span>${videoBox(v.video, { titulo: v.titulo, capa: v.capa, dica: 'Vídeo não encontrado: confira o nome em ' + pasta })}<figcaption>${esc(v.titulo || '')}</figcaption></figure>`);
-      if (vids.length < 3) for (let k = vids.length; k < 4; k++)
-        cards.push(`<figure class="polaroid ncard"><span class="fita"></span>${lacuna('🎬', `Coloque o .mp4 em ${pasta} e escreva o nome no DADOS`)}<figcaption></figcaption></figure>`);
+      const pasta = `midia/nichos/${slug(n.nome)}/`;
+      const cards = vids.map(v => `<figure class="polaroid ncard"><span class="fita"></span>${videoBox(v.video, { titulo: v.titulo, capa: v.capa, dica: 'Vídeo não encontrado: confira o nome em ' + pasta })}<figcaption>${esc(v.titulo || '')}</figcaption></figure>`);
+      for (let k = vids.length; k < 4; k++)
+        cards.push(`<figure class="polaroid ncard"><span class="fita"></span>${lacuna('🎬', `Vídeo ${k + 1}: coloque o .mp4 em ${pasta} e escreva o nome no DADOS`)}<figcaption></figcaption></figure>`);
       return `
-      <div class="pag-borda" id="nicho-${slug(n.nome)}"><article class="pagina">
+      <div class="pag-borda onda-borda" id="nicho-${slug(n.nome)}"><article class="pagina onda">
         <header class="pag-topo">
           <div>
             <span class="pag-num">página ${String(i + 1).padStart(2, '0')}</span>
@@ -524,19 +597,71 @@ function montar() {
     }).join('')}
   </div>`;
 
+  /* GALERIA DE FOTOS */
+  $('#galeria').innerHTML = `
+  <div class="wrap">
+    <div class="centro">
+      <span class="etiqueta">Galeria</span>
+      <h2>Produtos na vida real</h2>
+      <p class="sub">Fotos minhas usando e mostrando produtos, do jeito que eles aparecem na rotina. Clique pra ampliar.</p>
+    </div>
+    <div class="fotos">${D.galeria.map(g => `
+      <figure class="polaroid gcard"><span class="fita"></span>
+        <div class="fbox" role="button" tabindex="0" aria-label="Ampliar foto: ${esc(g.legenda)}" data-foto="${esc(g.foto)}" data-titulo="${esc(g.legenda)}">${foto(g.foto, g.legenda, '📸', 'Coloque a foto em midia/galeria/')}</div>
+        <figcaption>${esc(g.legenda)}</figcaption>
+      </figure>`).join('')}
+    </div>
+  </div>`;
+
+  /* MÉTRICAS */
+  $('#metricas').innerHTML = `
+  <div class="wrap">
+    <div class="centro">
+      <span class="etiqueta">Métricas</span>
+      <h2>Além de UGC, eu sou influencer</h2>
+      <p class="sub">Números reais dos meus perfis, tirados dos painéis do Instagram e do TikTok.</p>
+    </div>
+    <div class="redes">${D.metricas.map(r => `
+      <article class="rede">
+        <span class="fita"></span>
+        <div class="rede-topo"><h3>${esc(r.rede)}</h3>${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">ver perfil ↗</a>` : ''}<span class="periodo">${esc(r.periodo)}</span></div>
+        <div class="nums">${r.numeros.map((n, i) => `<div class="num${i < 2 ? ' forte' : ''}"><b>${esc(n.numero)}</b><span>${esc(n.texto)}</span></div>`).join('')}</div>
+        <div class="publico"><h4>Quem me assiste</h4>${r.publico.map(p => `<div class="barra"><span>${esc(p.texto)}</span><b>${esc(p.valor)}</b><i style="--p:${parseFloat(String(p.valor).replace(',', '.')) || 0}%"></i></div>`).join('')}</div>
+      </article>`).join('')}
+    </div>
+    <p class="nota-met">Prints completos das métricas disponíveis sob pedido.</p>
+  </div>`;
+
   /* 5. O QUE AS MARCAS FALAM */
   $('#feedback').innerHTML = `
   <div class="wrap">
-    <div class="topo-sec"><span class="etiqueta-rosa">Feedback</span><h2>O que as marcas falam</h2></div>
+    <div class="centro"><span class="etiqueta">Feedback</span><h2>O que as marcas falam</h2></div>
     <div class="bilhetes">${D.elogios.slice(0, 3).map(e => (e.texto || e.print) ? `
       <figure class="bilhete-card"><span class="fita"></span>
         ${e.print ? `<img src="${esc(e.print)}" alt="Print do elogio de ${esc(e.marca)}">` : `<blockquote>“${esc(e.texto)}”</blockquote>`}
-        <figcaption><span class="marca">${esc(e.marca)}</span><span class="det">${esc(e.detalhe)}</span></figcaption>
+        <figcaption><span class="marca">${esc(e.marca)}</span>${e.detalhe ? `<span class="det">${esc(e.detalhe)}</span>` : ''}</figcaption>
       </figure>` : `
       <figure class="bilhete-card"><span class="fita"></span>${lacuna('💬', 'cole aqui a frase ou o print real da marca')}</figure>`).join('')}
     </div>
-    <h3 class="marcas-tit">Marcas que já atendi</h3>
-    <ul class="marcas-lista">${D.marcas.map(m => `<li>${esc(m.nome)}</li>`).join('')}</ul>
+  </div>`;
+
+  /* VALORES */
+  const plano = p => `
+    <div class="plano-borda onda-borda"><article class="plano onda${p.destaque ? ' destaque' : ''}">
+      ${p.destaque ? '<span class="selo-rec">recomendado</span>' : ''}
+      <h3>${esc(p.nome)}</h3>
+      <p class="preco">${p.de ? `<s>${esc(p.de)}</s>` : ''}${esc(p.por)}</p>
+      <ul>${p.itens.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+      <a class="btn btn-verde" href="${esc(linkWhats(p.nome))}" target="_blank" rel="noopener">Quero conversar</a>
+    </article></div>`;
+  $('#valores').innerHTML = `
+  <div class="wrap">
+    <div class="centro">
+      <span class="etiqueta">Valores</span>
+      <h2>Pacotes pra sua marca</h2>
+    </div>
+    ${D.valores.map(g => `<p class="grupo-tit">${esc(g.grupo)}</p><div class="planos">${g.pacotes.map(plano).join('')}</div>`).join('')}
+    <p class="nota-valores">${esc(D.notaValores)}</p>
   </div>`;
 
   /* 6. CONTATO */
@@ -551,27 +676,28 @@ function montar() {
         <label>WhatsApp<input name="whatsapp" type="tel" required autocomplete="tel" inputmode="tel"></label>
       </div>
       <input class="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn btn-verm" type="submit">Pedir orçamento</button>
+      <button class="btn btn-verde" type="submit">Pedir orçamento</button>
       <p class="form-msg" role="status"></p>
     </form>` : '';
   $('#contato').innerHTML = `
   <div class="wrap"><div class="caderno">
-    <span class="etiqueta-rosa">Contato</span>
-    <h2>Seu produto merece um vídeo que brilha ✦</h2>
+    <span class="etiqueta">Contato</span>
+    <h2>Seu produto merece um vídeo que conecta</h2>
     <p class="chamado mao">bora trabalhar juntos?</p>
     <div class="botoes">
-      <a class="btn btn-verm" href="${esc(wa)}" target="_blank" rel="noopener">${D.whatsapp ? '💬 Chamar no WhatsApp' : '✉️ Mandar e-mail'}</a>
-      <a class="btn btn-branco" href="${esc(linkInsta())}" target="_blank" rel="noopener">Instagram ${esc(D.instagram)}</a>
+      <a class="btn btn-verde" href="${esc(wa)}" target="_blank" rel="noopener">${D.whatsapp ? '💬 Chamar no WhatsApp' : '✉️ Mandar e-mail'}</a>
+      ${D.instagram ? `<a class="btn btn-branco" href="${esc(D.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
+      ${D.tiktok ? `<a class="btn btn-branco" href="${esc(D.tiktok)}" target="_blank" rel="noopener">TikTok</a>` : ''}
     </div>
     ${form}
     <h3 class="duvidas-tit">Dúvidas rápidas</h3>
-    <div class="duvidas">${D.duvidas.slice(0, 4).map(d => `<div class="duvida"><b>${esc(d.pergunta)}</b>${d.resposta ? `<span>${esc(d.resposta)}</span>` : lacuna('✏️', d.dica || 'escreva a resposta aqui', 'linha')}</div>`).join('')}</div>
+    <div class="duvidas">${D.duvidas.slice(0, 4).map(d => `<div class="duvida"><b>${esc(d.pergunta)}</b>${d.resposta ? `<span>${esc(d.resposta)}</span>` : lacuna('✏️', 'escreva a resposta aqui')}</div>`).join('')}</div>
   </div></div>`;
 
-  $('#rodape').innerHTML = `<p class="rod-nome">${esc(D.nome)}</p><p>UGC creator · aluna da Rafa Chagas</p><p class="mao">feito com brilho ✦</p>`;
+  $('#rodape').innerHTML = `<p class="rod-nome">${esc(D.nome)}</p><p>${esc(D.titulo)} · ${esc(D.cidade)}</p><p class="mao">feito com carinho ✿</p>`;
 
   ligarInteracoes();
-  if (D.umami) { // métricas: só cria o script se tiver ID
+  if (D.umami) { // métricas de acesso: só cria o script se tiver ID
     const s = document.createElement('script');
     s.src = 'https://cloud.umami.is/script.js'; s.defer = true;
     s.setAttribute('data-website-id', D.umami);
@@ -588,7 +714,6 @@ function montar() {
 
 /* ------------------------- INTERAÇÕES ------------------------- */
 function ligarInteracoes() {
-  /* menu do celular */
   const bt = $('.nav-btn'), nm = $('#navMobile');
   bt.addEventListener('click', () => { const abre = nm.hidden; nm.hidden = !abre; bt.setAttribute('aria-expanded', abre); bt.textContent = abre ? 'fechar' : 'menu'; });
   nm.addEventListener('click', e => { if (e.target.closest('a')) { nm.hidden = true; bt.setAttribute('aria-expanded', false); bt.textContent = 'menu'; } });
@@ -604,15 +729,17 @@ function ligarInteracoes() {
     b.addEventListener('mouseleave', () => { const v = b.querySelector('video'); if (v) { v.pause(); v.currentTime = .1; } });
   });
 
-  /* clique/toque abre o player */
+  /* clique/toque abre o player (vídeo ou foto) */
+  const alvoMidia = el => el.closest('.vbox, .fbox');
   document.addEventListener('click', e => {
-    const b = e.target.closest('.vbox');
+    const b = alvoMidia(e.target);
     if (!b || b.classList.contains('vazio')) return;
     const tr = b.closest('.carrossel'); if (tr && tr.dataset.arrastou) return;
     abrirPlayer(b);
   });
   document.addEventListener('keydown', e => {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList?.contains('vbox') && !e.target.classList.contains('vazio')) { e.preventDefault(); abrirPlayer(e.target); }
+    const b = e.target.classList && (e.target.classList.contains('vbox') || e.target.classList.contains('fbox')) ? e.target : null;
+    if ((e.key === 'Enter' || e.key === ' ') && b && !b.classList.contains('vazio')) { e.preventDefault(); abrirPlayer(b); }
     if (e.key === 'Escape' && !$('#player').hidden) fecharPlayer();
   });
   $('#player').addEventListener('click', e => { if (e.target.id === 'player' || e.target.closest('.player-x')) fecharPlayer(); });
@@ -646,28 +773,33 @@ function ligarInteracoes() {
       f.innerHTML = '<p class="form-ok">Recebi! Te chamo em breve.</p>';
     } catch {
       btn.disabled = false;
-      msg.innerHTML = `Não consegui enviar agora. Me chama direto: <a class="btn btn-verm" style="margin-top:10px;width:100%" href="${esc(linkWhats())}" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>`;
+      msg.innerHTML = `Não consegui enviar agora. Me chama direto: <a class="btn btn-verde" style="margin-top:10px;width:100%" href="${esc(linkWhats())}" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>`;
     }
   });
 }
 
 let ultimoFoco = null;
 function abrirPlayer(box) {
-  const p = $('#player'), v = p.querySelector('video');
+  const p = $('#player'), v = p.querySelector('video'), im = p.querySelector('img');
   document.querySelectorAll('.vbox video').forEach(x => x.pause());
   ultimoFoco = box;
-  v.src = box.dataset.src; v.muted = false;
-  p.querySelector('.player-tit').textContent = box.dataset.titulo;
-  p.hidden = false; document.body.style.overflow = 'hidden';
-  v.play().catch(() => {});
-  p.querySelector('.player-x').focus();
-  if (window.umami && typeof window.umami.track === 'function') { // métrica: vídeo mais visto
-    try { window.umami.track(slug('video-' + box.dataset.titulo).slice(0, 50)); } catch (e) {}
+  p.querySelector('.player-tit').textContent = box.dataset.titulo || '';
+  if (box.dataset.foto) {
+    im.src = box.dataset.foto; im.alt = box.dataset.titulo || ''; im.hidden = false; v.hidden = true;
+  } else {
+    v.src = box.dataset.src; v.muted = false; v.hidden = false; im.hidden = true;
+    v.play().catch(() => {});
+    if (window.umami && typeof window.umami.track === 'function') { // métrica: vídeo mais visto
+      try { window.umami.track(slug('video-' + box.dataset.titulo).slice(0, 50)); } catch (e) {}
+    }
   }
+  p.hidden = false; document.body.style.overflow = 'hidden';
+  p.querySelector('.player-x').focus();
 }
 function fecharPlayer() {
   const p = $('#player'), v = p.querySelector('video');
   v.pause(); v.removeAttribute('src'); v.load();
+  p.querySelector('img').removeAttribute('src');
   p.hidden = true; document.body.style.overflow = '';
   if (ultimoFoco) ultimoFoco.focus();
   const auto = $('.vbox-auto video'); if (auto && !reduzMovimento) auto.play().catch(() => {});
@@ -681,15 +813,18 @@ document.addEventListener('DOMContentLoaded', montar);
    ===================================================================== */
 const DADOS = {
   nome: "Iara Gonçalves",                 // seu nome (menu, capa, rodapé)
-  instagram: "@iaragoncalves00",          // seu @ do Instagram
+  titulo: "UGC Influencer",               // aparece acima do nome, no selo que gira e no rodapé
+  cidade: "Brasília",
+  instagram: "https://www.instagram.com/iaragoncalves00",   // link do Instagram (o botão mostra só "Instagram")
+  tiktok: "https://www.tiktok.com/@iaragoncalves00",        // link do TikTok
   whatsapp: "61983633770",                // DDD + número, só dígitos. Vazio = o botão vira e-mail
   email: "workiaragoncalves@gmail.com",   // seu e-mail
-  site: "",                               // link do site depois de publicado (troque também o MEU-LINK lá no <head>)
+  site: "https://iara55544-lab.github.io/-ugc/", // link do site publicado (se mudar, troque também og:url e og:image lá no <head>)
   formspree: "",                          // link do formulário, tipo "https://formspree.io/f/abcdwxyz". Vazio = sem formulário
-  umami: "",                              // ID do site no Umami (métricas). Vazio = sem métricas
+  umami: "",                              // ID do site no Umami (contagem de acessos). Vazio = sem contagem
 
-  nichosResumo: "saúde, beleza, moda e lifestyle",   // completa a frase "UGC creator de ..."
-  frase: "Sou fisioterapeuta e criadora de conteúdo, especializada em storytelling para marcas de saúde, beleza, fashion e lifestyle. Meu conteúdo combina vida real, comunicação natural e uma estética cuidadosa para apresentar produtos de um jeito que não parece publicidade, mas desperta identificação, desejo e ação.",
+  nichosResumo: "saúde, beleza, moda e lifestyle",   // completa a frase "UGC creator e influencer de ..."
+  frase: "Fisioterapeuta e criadora de conteúdo. Storytelling com vida real para marcas de saúde, beleza, moda e lifestyle: vídeos que não parecem publicidade, mas despertam desejo e ação.",
 
   // os 3 números da capa
   provas: [
@@ -701,10 +836,10 @@ const DADOS = {
   fotoCapa: "midia/capa.jpg",   // sua foto da capa
   fotoSobre: "midia/sobre.jpg", // sua foto no dia a dia
 
-  // "Sobre mim": cada item é um parágrafo. "" = lacuna pra você escrever
+  // "Sobre mim": cada item é um parágrafo
   sobreTexto: [
-    "Sou a Iara, fisioterapeuta e criadora de conteúdo, e moro em Brasília.",
-    ""
+    "Minha rotina é uma mistura de trabalho, treinos, autocuidado, beleza e lifestyle.",
+    "Como criadora de conteúdo e fisioterapeuta, gosto de compartilhar experiências reais e mostrar como produtos e marcas podem fazer parte do dia a dia de forma natural, leve e autêntica."
   ],
 
   // os 3 diferenciais (tabelinha do Sobre mim)
@@ -715,49 +850,115 @@ const DADOS = {
   ],
 
   // os 3 MELHORES vídeos (o 1º é o mais forte e toca sozinho)
-  // formato: ADS, review, unboxing, tutorial ou nativo · res: resultado real, ex. "116 vendas" (vazio = sem selo)
-  // capa: imagem opcional que aparece antes do vídeo tocar
+  // nicho: opcional · res: resultado real, ex. "116 vendas" (vazio = sem selo) · capa: imagem opcional antes do vídeo tocar
   destaques: [
-    { titulo: "", nicho: "", formato: "", video: "midia/destaques/1.mp4", capa: "", res: "" },
-    { titulo: "", nicho: "", formato: "", video: "midia/destaques/2.mp4", capa: "", res: "" },
-    { titulo: "", nicho: "", formato: "", video: "midia/destaques/3.mp4", capa: "", res: "" }
+    { titulo: "Mercado Livre", nicho: "", formato: "storytelling", video: "midia/destaques/1.mp4", capa: "", res: "" },
+    { titulo: "Belive",        nicho: "", formato: "receita",      video: "midia/destaques/2.mp4", capa: "", res: "" },
+    { titulo: "Scarlet Box",   nicho: "", formato: "sensorial",    video: "midia/destaques/3.mp4", capa: "", res: "" }
   ],
 
-  // um item por nicho. Em videos, coloque o caminho de cada .mp4, ex.:
-  // videos: [ { titulo: "Review sérum", video: "midia/nichos/skincare/serum.mp4" }, ... ]
-  // Mínimo 3 vídeos por nicho (ideal 4 ou mais). O link ?c=skincare abre direto nesse nicho.
+  // um item por nicho. A pasta dos vídeos é midia/nichos/ + o nome sem acento e com hífen
+  // (ex.: midia/nichos/saude-e-wellness/). Em videos, escreva cada .mp4, ex.:
+  // videos: [ { titulo: "Rotina de treino", video: "midia/nichos/saude-e-wellness/treino.mp4" }, ... ]
+  // O link ?c=moda abre direto nesse nicho.
   nichos: [
-    { nome: "beleza",      videos: [] },
-    { nome: "skincare",    videos: [] },
-    { nome: "maquiagem",   videos: [] },
-    { nome: "cabelo",      videos: [] },
-    { nome: "moda",        videos: [] },
-    { nome: "comida",      videos: [] },
-    { nome: "fitness",     videos: [] },
-    { nome: "suplementos", videos: [] },
-    { nome: "tech",        videos: [] },
-    { nome: "carros",      videos: [] }
+    { nome: "Saúde e wellness",          videos: [] },
+    { nome: "Beleza e autocuidado",      videos: [] },
+    { nome: "Moda",                      videos: [] },
+    { nome: "Lifestyle e experiências",  videos: [] }
   ],
 
-  // depoimentos REAIS de marcas. texto = a frase; print = imagem do print (opcional); detalhe = contexto
+  // galeria de fotos com produtos (coloque mais fotos em midia/galeria/ e acrescente aqui)
+  galeria: [
+    { foto: "midia/galeria/01.jpg", legenda: "Celléri · skincare" },
+    { foto: "midia/galeria/02.jpg", legenda: "Siàge · cabelo" },
+    { foto: "midia/galeria/03.jpg", legenda: "gloss · maquiagem" },
+    { foto: "midia/galeria/04.jpg", legenda: "sérum · skincare" },
+    { foto: "midia/galeria/05.jpg", legenda: "patches · autocuidado" },
+    { foto: "midia/galeria/06.jpg", legenda: "naked wafer · snack" },
+    { foto: "midia/galeria/07.jpg", legenda: "sapatilha · moda" },
+    { foto: "midia/galeria/08.jpg", legenda: "Volkswagen · carros" }
+  ],
+
+  // métricas de influencer (atualize quando tirar prints novos)
+  metricas: [
+    {
+      rede: "Instagram", link: "https://www.instagram.com/iaragoncalves00",
+      periodo: "últimos 30 dias · 12 out a 11 nov 2026",
+      numeros: [
+        { numero: "3,5 mi",  texto: "visualizações de reels" },
+        { numero: "2 mi",    texto: "pessoas alcançadas" },
+        { numero: "343 mil", texto: "curtidas" },
+        { numero: "193 mil", texto: "compartilhamentos" },
+        { numero: "21 mil",  texto: "reposts" },
+        { numero: "13 mil",  texto: "salvamentos" },
+        { numero: "9 mil",   texto: "seguidores" },
+        { numero: "126",     texto: "reels no período" }
+      ],
+      publico: [
+        { texto: "Mulheres", valor: "87,5%" },
+        { texto: "25 a 34 anos", valor: "36,7%" },
+        { texto: "35 a 44 anos", valor: "21,3%" },
+        { texto: "Brasil", valor: "96,3%" }
+      ]
+    },
+    {
+      rede: "TikTok", link: "https://www.tiktok.com/@iaragoncalves00",
+      periodo: "últimos 28 dias · 14 out a 10 nov 2026",
+      numeros: [
+        { numero: "896 mil",   texto: "visualizações de vídeos" },
+        { numero: "714,4 mil", texto: "espectadores" },
+        { numero: "39,1 mil",  texto: "seguidores" },
+        { numero: "+10,9 mil", texto: "novos seguidores" },
+        { numero: "57,2 mil",  texto: "curtidas" },
+        { numero: "32,5 mil",  texto: "visitas ao perfil" },
+        { numero: "3,9 mil",   texto: "compartilhamentos" },
+        { numero: "1,2 mil",   texto: "comentários" }
+      ],
+      publico: [
+        { texto: "Mulheres", valor: "70%" },
+        { texto: "25 a 34 anos", valor: "47,1%" },
+        { texto: "18 a 24 anos", valor: "25,6%" },
+        { texto: "Brasil", valor: "99,2%" }
+      ]
+    }
+  ],
+
+  // depoimentos REAIS de marcas. texto = a frase; print = imagem do print (opcional); detalhe = contexto (opcional)
   elogios: [
-    { texto: "", marca: "", detalhe: "", print: "" },
-    { texto: "", marca: "", detalhe: "", print: "" },
-    { texto: "", marca: "", detalhe: "", print: "" }
+    { texto: "Iara, recebemos o conteúdo e ficamos apaixonadas! O mini review ficou extremamente autêntico e a textura foi apresentada exatamente como precisávamos.", marca: "Tropicália", detalhe: "", print: "" },
+    { texto: "O conteúdo superou nossas expectativas. Entre vários creators, você foi a única que seguiu o briefing à risca, do primeiro ao último detalhe.", marca: "Platô", detalhe: "", print: "" },
+    { texto: "Que entrega incrível! O storytelling foi tão genuíno que estamos te incluindo na nossa lista de creators fixos.", marca: "Solara Vitta", detalhe: "", print: "" }
   ],
 
-  // marcas que você já atendeu. logo é opcional, ex.: "midia/logos/mac.png"
+  // marcas com quem você já trabalhou (passam na faixa verde). logo é opcional, ex.: "midia/logos/mac.png"
   marcas: [
-    { nome: "MAC", logo: "" },
-    { nome: "Localiza", logo: "" }
+    { nome: "Pantene" }, { nome: "CeraVe" }, { nome: "Elseve" }, { nome: "Dove" }, { nome: "MAC" },
+    { nome: "L’Oréal Paris" }, { nome: "O Boticário" }, { nome: "Quem Disse, Berenice?" }, { nome: "Smart Fit" },
+    { nome: "Gummy Original" }, { nome: "Tuyo" }, { nome: "Platô" }, { nome: "La Fersan" }, { nome: "Volkswagen" },
+    { nome: "Localiza" }
   ],
 
-  // as 4 dúvidas do contato. resposta "" = lacuna
+  // pacotes e preços. de = preço antigo riscado (opcional) · destaque: true = cartão escuro "recomendado"
+  valores: [
+    { grupo: "Vídeos UGC pra sua marca", pacotes: [
+      { nome: "Pacote Essencial", por: "R$ 300", itens: ["1 vídeo vertical 15s–45s", "2 fotos de capa", "roteiro + ideia criativa", "gravação e edição", "adaptado para anúncios"] },
+      { nome: "Pacote Recomendado", de: "R$ 500", por: "R$ 450", destaque: true, itens: ["2 vídeos verticais", "2 fotos de capa", "roteiro + ideia criativa", "gravação e edição completa"] },
+      { nome: "Pacote Premium", de: "R$ 600", por: "R$ 540", itens: ["2 vídeos verticais", "4 fotos de capa", "pesquisa + briefing", "gravação e edição completa"] }
+    ]},
+    { grupo: "Publicidade no meu perfil", pacotes: [
+      { nome: "Publicidade no meu perfil", por: "R$ 600", itens: ["postagem nos stories", "inserção natural na rotina", "linguagem autêntica", "link ou cupom"] },
+      { nome: "UGC + Publi", por: "R$ 900", itens: ["1 vídeo + 2 fotos de capa", "publicação no perfil", "roteiro, gravação e edição", "link ou cupom"] }
+    ]}
+  ],
+  notaValores: "Valores de referência: escopo da campanha, mídia paga e direitos de uso são alinhados à parte.",
+
+  // as 4 dúvidas do contato
   duvidas: [
-    { pergunta: "Onde posso usar o conteúdo?", resposta: "", dica: "ex.: no orgânico e em anúncios; o uso fica no orçamento" },
-    { pergunta: "Por quanto tempo?",           resposta: "", dica: "ex.: 3, 6 ou 12 meses de direito de uso" },
-    { pergunta: "Tem exclusividade?",          resposta: "", dica: "ex.: sim, por um período combinado, com valor à parte" },
-    { pergunta: "Qual o prazo?",               resposta: "Entrego em até 10 dias." }
+    { pergunta: "Onde posso usar o conteúdo?", resposta: "Nas redes sociais da marca, no site e em anúncios pagos. O uso em mídia paga é combinado no orçamento." },
+    { pergunta: "Por quanto tempo?",           resposta: "O direito de uso padrão é de 3 meses. Prazos maiores (6 ou 12 meses) são alinhados à parte." },
+    { pergunta: "Tem exclusividade?",          resposta: "Pode ter: combinamos o período e o segmento, com valor à parte." },
+    { pergunta: "Qual o prazo?",               resposta: "Entrego em até 10 dias depois do roteiro aprovado." }
   ]
 };
 </script>
