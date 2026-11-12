@@ -12,7 +12,7 @@
 <meta property="og:description" content="Fisioterapeuta e criadora de conteúdo. Storytelling com vida real para marcas de saúde, beleza, moda e lifestyle.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://iara55544-lab.github.io/-ugc/">
-<meta property="og:image" content="https://iara55544-lab.github.io/-ugc/midia/capa.jpg">
+<meta property="og:image" content="https://iara55544-lab.github.io/-ugc/midia/galeria/capa.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -512,7 +512,7 @@ function montar() {
       </div>
       <figure class="polaroid polaroid-capa">
         <span class="fita f1"></span><span class="fita f2"></span>
-        <div class="foto-box">${foto(D.fotoCapa, 'Foto de ' + D.nome, '📷', 'Retrato com rosto, luz natural e ambiente real · midia/capa.jpg')}</div>
+        <div class="foto-box">${foto(D.fotoCapa, 'Foto de ' + D.nome, '📷', 'Retrato com rosto, luz natural e ambiente real · midia/galeria/capa.jpg')}</div>
         <figcaption><span class="etiqueta-papel">Vídeos feitos por: <b>${esc(D.nome)}</b></span></figcaption>
       </figure>
       <span class="adesivo" style="top:-26px;right:12%" aria-hidden="true">💄</span>
@@ -532,7 +532,7 @@ function montar() {
         ${(D.sobreTexto || []).filter(Boolean).map(p => `<p>${esc(p)}</p>`).join('')}
       </div>
       <figure class="polaroid polaroid-sobre"><span class="fita"></span>
-        <div class="foto-box">${foto(D.fotoSobre, D.nome + ' no dia a dia', '☕', 'Você no dia a dia, na sua rotina real · midia/sobre.jpg')}</div>
+        <div class="foto-box">${foto(D.fotoSobre, D.nome + ' no dia a dia', '☕', 'Você no dia a dia, na sua rotina real · midia/galeria/sobre.jpg')}</div>
         <figcaption>eu no dia a dia</figcaption>
       </figure>
     </div>
@@ -607,7 +607,7 @@ function montar() {
     </div>
     <div class="fotos">${D.galeria.map(g => `
       <figure class="polaroid gcard"><span class="fita"></span>
-        <div class="fbox" role="button" tabindex="0" aria-label="Ampliar foto: ${esc(g.legenda)}" data-foto="${esc(g.foto)}" data-titulo="${esc(g.legenda)}">${foto(g.foto, g.legenda, '📸', 'Coloque a foto em midia/galeria/')}</div>
+        <div class="fbox" role="button" tabindex="0" aria-label="Ampliar foto: ${esc(g.legenda)}" data-foto="${esc(g.foto)}" data-titulo="${esc(g.legenda)}">${foto(g.foto, g.legenda, '📸', 'Coloque a foto em midia/galeria/galeria/')}</div>
         <figcaption>${esc(g.legenda)}</figcaption>
       </figure>`).join('')}
     </div>
@@ -833,8 +833,8 @@ const DADOS = {
     { numero: "10",   texto: "dias pra entregar" }
   ],
 
-  fotoCapa: "midia/capa.jpg",   // sua foto da capa
-  fotoSobre: "midia/sobre.jpg", // sua foto no dia a dia
+  fotoCapa: "midia/galeria/capa.jpg",   // sua foto da capa
+  fotoSobre: "midia/galeria/sobre.jpg", // sua foto no dia a dia
 
   // "Sobre mim": cada item é um parágrafo
   sobreTexto: [
@@ -868,16 +868,16 @@ const DADOS = {
     { nome: "Lifestyle e experiências",  videos: [] }
   ],
 
-  // galeria de fotos com produtos (coloque mais fotos em midia/galeria/ e acrescente aqui)
+  // galeria de fotos com produtos (coloque mais fotos em midia/galeria/galeria/ e acrescente aqui)
   galeria: [
-    { foto: "midia/galeria/01.jpg", legenda: "Celléri · skincare" },
-    { foto: "midia/galeria/02.jpg", legenda: "Siàge · cabelo" },
-    { foto: "midia/galeria/03.jpg", legenda: "gloss · maquiagem" },
-    { foto: "midia/galeria/04.jpg", legenda: "sérum · skincare" },
-    { foto: "midia/galeria/05.jpg", legenda: "patches · autocuidado" },
-    { foto: "midia/galeria/06.jpg", legenda: "naked wafer · snack" },
-    { foto: "midia/galeria/07.jpg", legenda: "sapatilha · moda" },
-    { foto: "midia/galeria/08.jpg", legenda: "Volkswagen · carros" }
+    { foto: "midia/galeria/galeria/01.jpg", legenda: "Celléri · skincare" },
+    { foto: "midia/galeria/galeria/02.jpg", legenda: "Siàge · cabelo" },
+    { foto: "midia/galeria/galeria/03.jpg", legenda: "gloss · maquiagem" },
+    { foto: "midia/galeria/galeria/04.jpg", legenda: "sérum · skincare" },
+    { foto: "midia/galeria/galeria/05.jpg", legenda: "patches · autocuidado" },
+    { foto: "midia/galeria/galeria/06.jpg", legenda: "naked wafer · snack" },
+    { foto: "midia/galeria/galeria/07.jpg", legenda: "sapatilha · moda" },
+    { foto: "midia/galeria/galeria/08.jpg", legenda: "Volkswagen · carros" }
   ],
 
   // métricas de influencer (atualize quando tirar prints novos)
