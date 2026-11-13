@@ -155,7 +155,9 @@ section{scroll-margin-top:84px}
 
 /* ---------- vídeos ---------- */
 .vbox{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--linha);cursor:pointer}
-.vbox video{width:100%;height:100%;object-fit:cover}
+.vbox video,.vbox-yt img{width:100%;height:100%;object-fit:cover}
+.vbox-yt img{transition:transform .3s}
+.vbox-yt:hover img{transform:scale(1.04)}
 .vbox.vazio{cursor:default}
 .vplay{position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--papel);color:var(--verde);display:grid;place-items:center;font-size:15px;box-shadow:0 3px 8px rgba(0,0,0,.2);pointer-events:none}
 
@@ -296,9 +298,10 @@ section{scroll-margin-top:84px}
 .player{position:fixed;inset:0;z-index:100;background:rgba(15,24,19,.88);display:flex;align-items:center;justify-content:center;padding:20px}
 .player[hidden],.player [hidden]{display:none}
 .player-caixa{position:relative;display:flex;flex-direction:column;align-items:center}
-.player video{height:min(84vh,calc(92vw*16/9));width:auto;max-width:92vw;aspect-ratio:9/16;background:#000;border-radius:10px}
+.player video,.player iframe{height:min(84vh,calc(92vw*16/9));width:auto;max-width:92vw;aspect-ratio:9/16;background:#000;border-radius:10px;border:0}
 .player img{max-height:84vh;max-width:92vw;border-radius:10px;background:#000}
 .player-tit{color:var(--creme);margin-top:10px;font-family:var(--mao);font-size:22px}
+.player-tit a{color:var(--amarelo);font-family:var(--texto);font-size:14px;font-weight:700}
 .player-x{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border-radius:50%;border:2px solid var(--verde);background:var(--creme);color:var(--verde);font-size:24px;cursor:pointer;line-height:1}
 
 /* ---------- responsivo ---------- */
@@ -401,6 +404,7 @@ section{scroll-margin-top:84px}
 <div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Mídia ampliada">
   <div class="player-caixa">
     <video controls playsinline hidden></video>
+    <iframe title="Vídeo do YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe>
     <img alt="" hidden>
     <p class="player-tit"></p>
     <button class="player-x" type="button" aria-label="Fechar">×</button>
@@ -445,10 +449,19 @@ function foto(src, alt, ico, dica) {
 function semFoto(img) { const box = img.parentElement; box.classList.add('vazio'); box.innerHTML = lacuna(img.dataset.ico, img.dataset.dica); }
 
 /* Vídeo: miniatura com #t=0.1; se faltar o arquivo, vira lacuna */
-const linkExterno = s => /instagram\.com|tiktok\.com|drive\.google|youtu/i.test(s);
+const linkExterno = s => /instagram\.com|tiktok\.com|drive\.google/i.test(s);
+/* YouTube: pega o código do vídeo de links de Shorts, youtu.be ou watch?v= */
+const ytId = s => (String(s).match(/(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/) || [])[1];
 function videoBox(src, o = {}) {
   if (!src) return `<div class="vbox vazio">${lacuna('🎬', o.dica)}</div>`;
-  if (linkExterno(src)) return `<div class="vbox vazio">${lacuna('⚠️', 'Link de rede social não toca aqui: baixe o .mp4 e coloque na pasta midia')}</div>`;
+  if (linkExterno(src)) return `<div class="vbox vazio">${lacuna('⚠️', 'Link de Instagram, TikTok ou Drive não toca aqui: use o .mp4 ou um link do YouTube')}</div>`;
+  const yt = ytId(src);
+  if (yt) {
+    const t = o.titulo || 'vídeo';
+    return `<div class="vbox vbox-yt" role="button" tabindex="0" aria-label="Assistir: ${esc(t)}" data-yt="${yt}" data-titulo="${esc(t)}">
+      <img src="${esc(o.capa || `https://i.ytimg.com/vi/${yt}/hqdefault.jpg`)}" alt="" loading="lazy">
+      <span class="vplay" aria-hidden="true">▶</span></div>`;
+  }
   const tit = o.titulo || src.split('/').pop().replace(/\.mp4$/i, '');
   const auto = o.auto && !reduzMovimento ? ' autoplay' : '';
   return `<div class="vbox${o.auto ? ' vbox-auto' : ''}" role="button" tabindex="0" aria-label="Assistir: ${esc(tit)}" data-src="${esc(src)}" data-titulo="${esc(tit)}" data-dica="${esc(o.dica)}">
@@ -780,15 +793,21 @@ function ligarInteracoes() {
 
 let ultimoFoco = null;
 function abrirPlayer(box) {
-  const p = $('#player'), v = p.querySelector('video'), im = p.querySelector('img');
+  const p = $('#player'), v = p.querySelector('video'), im = p.querySelector('img'), fr = p.querySelector('iframe');
   document.querySelectorAll('.vbox video').forEach(x => x.pause());
   ultimoFoco = box;
   p.querySelector('.player-tit').textContent = box.dataset.titulo || '';
+  v.hidden = im.hidden = fr.hidden = true;
   if (box.dataset.foto) {
-    im.src = box.dataset.foto; im.alt = box.dataset.titulo || ''; im.hidden = false; v.hidden = true;
+    im.src = box.dataset.foto; im.alt = box.dataset.titulo || ''; im.hidden = false;
   } else {
-    v.src = box.dataset.src; v.muted = false; v.hidden = false; im.hidden = true;
-    v.play().catch(() => {});
+    if (box.dataset.yt) {
+      fr.src = `https://www.youtube.com/embed/${box.dataset.yt}?autoplay=1&playsinline=1&rel=0`; fr.hidden = false;
+      p.querySelector('.player-tit').innerHTML = `${esc(box.dataset.titulo || '')} · <a href="https://youtube.com/shorts/${box.dataset.yt}" target="_blank" rel="noopener">assistir no YouTube ↗</a>`;
+    } else {
+      v.src = box.dataset.src; v.muted = false; v.hidden = false;
+      v.play().catch(() => {});
+    }
     if (window.umami && typeof window.umami.track === 'function') { // métrica: vídeo mais visto
       try { window.umami.track(slug('video-' + box.dataset.titulo).slice(0, 50)); } catch (e) {}
     }
@@ -800,6 +819,7 @@ function fecharPlayer() {
   const p = $('#player'), v = p.querySelector('video');
   v.pause(); v.removeAttribute('src'); v.load();
   p.querySelector('img').removeAttribute('src');
+  p.querySelector('iframe').removeAttribute('src');
   p.hidden = true; document.body.style.overflow = '';
   if (ultimoFoco) ultimoFoco.focus();
   const auto = $('.vbox-auto video'); if (auto && !reduzMovimento) auto.play().catch(() => {});
@@ -817,7 +837,7 @@ const DADOS = {
   cidade: "Brasília",
   instagram: "https://www.instagram.com/iaragoncalves00",   // link do Instagram (o botão mostra só "Instagram")
   tiktok: "https://www.tiktok.com/@iaragoncalves00",        // link do TikTok
-  whatsapp: "61983633770",                // DDD + número, só dígitos. Vazio = o botão vira e-mail
+  whatsapp: "61993734419",               // DDD + número, só dígitos. Vazio = o botão vira e-mail
   email: "workiaragoncalves@gmail.com",   // seu e-mail
   site: "https://iara55544-lab.github.io/-ugc/", // link do site publicado (se mudar, troque também og:url e og:image lá no <head>)
   formspree: "",                          // link do formulário, tipo "https://formspree.io/f/abcdwxyz". Vazio = sem formulário
@@ -850,10 +870,10 @@ const DADOS = {
   ],
 
   // os 3 MELHORES vídeos (o 1º é o mais forte e toca sozinho)
-  // nicho: opcional · res: resultado real, ex. "116 vendas" (vazio = sem selo) · capa: imagem opcional antes do vídeo tocar
+  // video: arquivo .mp4 OU link do YouTube (Shorts ou normal) · nicho: opcional · res: resultado real, ex. "116 vendas" (vazio = sem selo) · capa: imagem opcional antes do vídeo tocar
   destaques: [
     { titulo: "Mercado Livre", nicho: "", formato: "storytelling", video: "midia/destaques/1.mp4", capa: "", res: "" },
-    { titulo: "Belive",        nicho: "", formato: "receita",      video: "midia/destaques/2.mp4", capa: "", res: "" },
+    { titulo: "Belive",        nicho: "", formato: "receita",      video: "https://youtube.com/shorts/MR0aT25dcec", capa: "", res: "" },
     { titulo: "Scarlet Box",   nicho: "", formato: "sensorial",    video: "midia/destaques/3.mp4", capa: "", res: "" }
   ],
 
