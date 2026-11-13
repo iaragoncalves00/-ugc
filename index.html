@@ -185,7 +185,6 @@ section{scroll-margin-top:84px}
 .setas{display:flex;gap:10px}
 .seta-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--verde);color:var(--creme);font-size:20px;cursor:pointer;display:grid;place-items:center}
 .seta-btn:hover{background:var(--oliva)}
-.aviso{margin-top:14px;display:inline-block;font-size:13px;background:var(--papel);border:1.5px dashed var(--oliva);color:var(--verde);border-radius:8px;padding:6px 12px}
 .carrossel{--gap:20px;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*var(--gap))/4);gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 6px 18px;margin-top:8px;scrollbar-width:thin;scrollbar-color:var(--oliva) transparent;cursor:grab}
 .carrossel.arrastando{scroll-snap-type:none;cursor:grabbing;user-select:none}
 .ncard{scroll-snap-align:start}
@@ -298,7 +297,10 @@ section{scroll-margin-top:84px}
 .player{position:fixed;inset:0;z-index:100;background:rgba(15,24,19,.88);display:flex;align-items:center;justify-content:center;padding:20px}
 .player[hidden],.player [hidden]{display:none}
 .player-caixa{position:relative;display:flex;flex-direction:column;align-items:center}
-.player video,.player iframe{height:min(84vh,calc(92vw*16/9));width:auto;max-width:92vw;aspect-ratio:9/16;background:#000;border-radius:10px;border:0}
+.player video,.yt-frame{height:min(84vh,calc(92vw*16/9));width:auto;max-width:92vw;aspect-ratio:9/16;background:#000;border-radius:10px;border:0}
+/* YouTube: o vídeo fica um pouco maior que a moldura pra esconder a faixa de cima (título e marca Shorts) */
+.yt-frame{position:relative;overflow:hidden}
+.yt-frame iframe{position:absolute;top:-72px;left:-20px;width:calc(100% + 40px);height:calc(100% + 72px);border:0}
 .player img{max-height:84vh;max-width:92vw;border-radius:10px;background:#000}
 .player-tit{color:var(--creme);margin-top:10px;font-family:var(--mao);font-size:22px}
 .player-tit a{color:var(--amarelo);font-family:var(--texto);font-size:14px;font-weight:700}
@@ -404,7 +406,7 @@ section{scroll-margin-top:84px}
 <div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Mídia ampliada">
   <div class="player-caixa">
     <video controls playsinline hidden></video>
-    <iframe title="Vídeo do YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen hidden></iframe>
+    <div class="yt-frame" hidden><iframe title="Vídeo" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
     <img alt="" hidden>
     <p class="player-tit"></p>
     <button class="player-x" type="button" aria-label="Fechar">×</button>
@@ -604,7 +606,6 @@ function montar() {
             <button class="seta-btn" type="button" data-dir="1" aria-label="Próximos vídeos de ${esc(n.nome)}">→</button>
           </div>
         </header>
-        ${vids.length < 3 ? '<p class="aviso">mínimo 3 vídeos: com menos, tire o nicho</p>' : ''}
         <div class="carrossel">${cards.join('')}</div>
       </article></div>`;
     }).join('')}
@@ -793,17 +794,16 @@ function ligarInteracoes() {
 
 let ultimoFoco = null;
 function abrirPlayer(box) {
-  const p = $('#player'), v = p.querySelector('video'), im = p.querySelector('img'), fr = p.querySelector('iframe');
+  const p = $('#player'), v = p.querySelector('video'), im = p.querySelector('img'), fr = p.querySelector('iframe'), yw = p.querySelector('.yt-frame');
   document.querySelectorAll('.vbox video').forEach(x => x.pause());
   ultimoFoco = box;
   p.querySelector('.player-tit').textContent = box.dataset.titulo || '';
-  v.hidden = im.hidden = fr.hidden = true;
+  v.hidden = im.hidden = yw.hidden = true;
   if (box.dataset.foto) {
     im.src = box.dataset.foto; im.alt = box.dataset.titulo || ''; im.hidden = false;
   } else {
     if (box.dataset.yt) {
-      fr.src = `https://www.youtube.com/embed/${box.dataset.yt}?autoplay=1&playsinline=1&rel=0`; fr.hidden = false;
-      p.querySelector('.player-tit').innerHTML = `${esc(box.dataset.titulo || '')} · <a href="https://youtube.com/shorts/${box.dataset.yt}" target="_blank" rel="noopener">assistir no YouTube ↗</a>`;
+      fr.src = `https://www.youtube.com/embed/${box.dataset.yt}?autoplay=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&vq=hd1080`; yw.hidden = false;
     } else {
       v.src = box.dataset.src; v.muted = false; v.hidden = false;
       v.play().catch(() => {});
@@ -870,22 +870,42 @@ const DADOS = {
   ],
 
   // os 3 MELHORES vídeos (o 1º é o mais forte e toca sozinho)
-  // video: arquivo .mp4 OU link do YouTube (Shorts ou normal) · nicho: opcional · res: resultado real, ex. "116 vendas" (vazio = sem selo) · capa: imagem opcional antes do vídeo tocar
+  // video: arquivo .mp4 OU link do YouTube (Shorts ou normal) · nicho: opcional · res: resultado real, ex. "116 vendas" (vazio = sem selo)
+  // capa: imagem que aparece antes do vídeo tocar. Pros vídeos do YouTube use
+  //   https://i.ytimg.com/vi/CÓDIGO/oar1.jpg (quadro do começo), oar2.jpg (meio) ou oar3.jpg (fim): todas em alta (1080x1920)
   destaques: [
-    { titulo: "Mercado Livre", nicho: "", formato: "storytelling", video: "midia/destaques/1.mp4", capa: "", res: "" },
-    { titulo: "Belive",        nicho: "", formato: "receita",      video: "https://youtube.com/shorts/MR0aT25dcec", capa: "", res: "" },
-    { titulo: "Scarlet Box",   nicho: "", formato: "sensorial",    video: "midia/destaques/3.mp4", capa: "", res: "" }
+    { titulo: "Mercado Livre", nicho: "", formato: "storytelling", video: "https://youtube.com/shorts/i_biQz9CWBA", capa: "https://i.ytimg.com/vi/i_biQz9CWBA/oar3.jpg", res: "" },
+    { titulo: "Belive",        nicho: "", formato: "receita",      video: "https://youtube.com/shorts/MR0aT25dcec", capa: "https://i.ytimg.com/vi/MR0aT25dcec/oar2.jpg", res: "" },
+    { titulo: "Scarlet Box",   nicho: "", formato: "sensorial",    video: "https://youtube.com/shorts/It6RIBMS6d0", capa: "https://i.ytimg.com/vi/It6RIBMS6d0/oar1.jpg", res: "" }
   ],
 
-  // um item por nicho. A pasta dos vídeos é midia/nichos/ + o nome sem acento e com hífen
-  // (ex.: midia/nichos/saude-e-wellness/). Em videos, escreva cada .mp4, ex.:
-  // videos: [ { titulo: "Rotina de treino", video: "midia/nichos/saude-e-wellness/treino.mp4" }, ... ]
-  // O link ?c=moda abre direto nesse nicho.
+  // um item por nicho, cada um com a lista de vídeos (link do YouTube ou arquivo .mp4)
+  // O link do site com ?c=lifestyle-e-experiencias abre direto nesse nicho.
   nichos: [
-    { nome: "Saúde e wellness",          videos: [] },
-    { nome: "Beleza e autocuidado",      videos: [] },
-    { nome: "Moda",                      videos: [] },
-    { nome: "Lifestyle e experiências",  videos: [] }
+    { nome: "Saúde e wellness", videos: [
+      { titulo: "Vouq",       video: "https://youtube.com/shorts/Mvfg4sxAFqw", capa: "https://i.ytimg.com/vi/Mvfg4sxAFqw/oar3.jpg" },
+      { titulo: "Smart Fit",  video: "https://youtube.com/shorts/aXLrJyvdqwM", capa: "https://i.ytimg.com/vi/aXLrJyvdqwM/oar3.jpg" },
+      { titulo: "Naked Nuts", video: "https://youtube.com/shorts/qgJQWPu92vU", capa: "https://i.ytimg.com/vi/qgJQWPu92vU/oar2.jpg" },
+      { titulo: "Genera",     video: "https://youtube.com/shorts/XvJc-ExCaTg", capa: "https://i.ytimg.com/vi/XvJc-ExCaTg/oar3.jpg" }
+    ]},
+    { nome: "Beleza, autocuidado e moda", videos: [
+      { titulo: "MAC",                   video: "https://youtube.com/shorts/ziGKRMEgKc8", capa: "https://i.ytimg.com/vi/ziGKRMEgKc8/oar3.jpg" },
+      { titulo: "Quem Disse, Berenice?", video: "https://youtube.com/shorts/VdpcDyjIF-A", capa: "https://i.ytimg.com/vi/VdpcDyjIF-A/oar3.jpg" },
+      { titulo: "Alva",                  video: "https://youtube.com/shorts/zarQfcS2A8Q", capa: "https://i.ytimg.com/vi/zarQfcS2A8Q/oar1.jpg" },
+      { titulo: "Femmei9",               video: "https://youtube.com/shorts/FM9t0RUOZ-Y", capa: "https://i.ytimg.com/vi/FM9t0RUOZ-Y/oar2.jpg" },
+      { titulo: "Dr. Melaxin",           video: "https://youtube.com/shorts/uvRuBKKg7zM", capa: "https://i.ytimg.com/vi/uvRuBKKg7zM/oar1.jpg" },
+      { titulo: "Creamy",                video: "https://youtube.com/shorts/AVsjgJu9uD0", capa: "https://i.ytimg.com/vi/AVsjgJu9uD0/oar3.jpg" },
+      { titulo: "Aurae",                 video: "https://youtube.com/shorts/j_dJBh6XrG0", capa: "https://i.ytimg.com/vi/j_dJBh6XrG0/oar3.jpg" },
+      { titulo: "Nudista CeraVe",        video: "https://youtube.com/shorts/wt2R2Xjlfho", capa: "https://i.ytimg.com/vi/wt2R2Xjlfho/oar3.jpg" },
+      { titulo: "Platô",                 video: "https://youtube.com/shorts/kExrPSOLPZE", capa: "https://i.ytimg.com/vi/kExrPSOLPZE/oar2.jpg" },
+      { titulo: "La Fersan",             video: "https://youtube.com/shorts/sPOLN8b4L38", capa: "https://i.ytimg.com/vi/sPOLN8b4L38/oar3.jpg" }
+    ]},
+    { nome: "Lifestyle e experiências", videos: [
+      { titulo: "Volkswagen", video: "https://youtube.com/shorts/LmMKLQ5iuWk", capa: "https://i.ytimg.com/vi/LmMKLQ5iuWk/oar2.jpg" },
+      { titulo: "Shopper",    video: "https://youtube.com/shorts/TDRaMvOGRk8", capa: "https://i.ytimg.com/vi/TDRaMvOGRk8/oar3.jpg" },
+      { titulo: "Localiza",   video: "https://youtube.com/shorts/GOkI-2sKj18", capa: "https://i.ytimg.com/vi/GOkI-2sKj18/oar3.jpg" },
+      { titulo: "MAC",        video: "https://youtube.com/shorts/9w2gHf03ysA", capa: "https://i.ytimg.com/vi/9w2gHf03ysA/oar3.jpg" }
+    ]}
   ],
 
   // galeria de fotos com produtos (coloque mais fotos em midia/galeria/galeria/ e acrescente aqui)
