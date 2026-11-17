@@ -211,7 +211,6 @@ section{scroll-margin-top:84px}
 .rede-topo{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--verde);padding-bottom:12px}
 .rede-topo h3{font-size:28px}
 .rede-topo a{font-size:13px;font-weight:700}
-.periodo{font-family:var(--mao);font-weight:700;font-size:20px;color:var(--oliva);width:100%}
 .nums{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:6px}
 .num{padding:14px 4px;border-bottom:1px dashed var(--linha)}
 .num b{display:block;font-family:var(--serifa);font-weight:500;font-size:30px;line-height:1.05}
@@ -638,7 +637,7 @@ function montar() {
     <div class="redes">${D.metricas.map(r => `
       <article class="rede">
         <span class="fita"></span>
-        <div class="rede-topo"><h3>${esc(r.rede)}</h3>${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">ver perfil ↗</a>` : ''}<span class="periodo">${esc(r.periodo)}</span></div>
+        <div class="rede-topo"><h3>${esc(r.rede)}</h3>${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener">ver perfil ↗</a>` : ''}</div>
         <div class="nums">${r.numeros.map((n, i) => `<div class="num${i < 2 ? ' forte' : ''}"><b>${esc(n.numero)}</b><span>${esc(n.texto)}</span></div>`).join('')}</div>
         <div class="publico"><h4>Quem me assiste</h4>${r.publico.map(p => `<div class="barra"><span>${esc(p.texto)}</span><b>${esc(p.valor)}</b><i style="--p:${parseFloat(String(p.valor).replace(',', '.')) || 0}%"></i></div>`).join('')}</div>
       </article>`).join('')}
@@ -924,7 +923,6 @@ const DADOS = {
   metricas: [
     {
       rede: "Instagram", link: "https://www.instagram.com/iaragoncalves00",
-      periodo: "últimos 30 dias · 12 out a 11 nov 2026",
       numeros: [
         { numero: "3,5 mi",  texto: "visualizações de reels" },
         { numero: "2 mi",    texto: "pessoas alcançadas" },
@@ -933,7 +931,7 @@ const DADOS = {
         { numero: "21 mil",  texto: "reposts" },
         { numero: "13 mil",  texto: "salvamentos" },
         { numero: "9 mil",   texto: "seguidores" },
-        { numero: "126",     texto: "reels no período" }
+        { numero: "126",     texto: "reels publicados" }
       ],
       publico: [
         { texto: "Mulheres", valor: "87,5%" },
@@ -944,7 +942,6 @@ const DADOS = {
     },
     {
       rede: "TikTok", link: "https://www.tiktok.com/@iaragoncalves00",
-      periodo: "últimos 28 dias · 14 out a 10 nov 2026",
       numeros: [
         { numero: "896 mil",   texto: "visualizações de vídeos" },
         { numero: "714,4 mil", texto: "espectadores" },
